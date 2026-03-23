@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // prompt会在网页弹出问题框
+        // do{
+        //     var result = prompt('你爱不爱我？')
+        // }while(result !=='yes')
+        // alert('我也爱你')
+
+
+        // for(var i=1;i<=100;i++){
+        //     if(i%3==0){
+        //         document.writeln(i)
+        //     }
+        // }
+
+//长方形
+        // for(var i=1;i<=9;i++){
+        //     for(var j=1;j<=9;j++){
+        //         document.writeln('* ')
+        //     }
+        //     document.write('</br>')
+        // }
+
+//三角形
+        // for(var i=1;i<=9;i++){
+        //     for(var j=1;j<=i;j++){
+        //         document.writeln('* ')
+        //     }
+        //     document.write('</br>')
+        // }
+
+//九九乘法表
+    //     for(var i=1;i<=9;i++){
+    //         for(var j=1;j<=i;j++){
+    //             document.write(i+'*'+j+' = '+i*j+'    ')
+    //             /*HTML 的空格处理规则：
+    // 连续空格会被合并为单个空格
+    // 制表符、换行符等也会被处理为单个空格
+    // 这是 HTML 的默认渲染行为*/
+    //         }
+    //         document.write('</br>')
+    //     }
+
+//最大公约数
+        // var min = 24
+        // var max = 98
+        // for(var i=min;i>=1;i--){
+        //     if(max%i===0 &&min%i===0){
+        //         document.write(i)
+        //         break
+        //     }
+        // }
+
+//最小公倍数
+        var min = 24
+        var max = 98
+        for(var i=max;i<=max*min;i+=max){
+            if(i%min===0){
+                document.write(i)
+                break
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    <!-- ES6以前，我们定义变量使用var
+    ES6新增了两个定义变量的关键字 let and const
+    var 会进行预解析，可以声明两个重名的变量，没有块级作用域，let和const相反
+    let 定义变量  定义的时候可以不赋值  定义的变量可以被修改
+    const  定义常量   定义时不许赋值  定义赋值后不能被修改
+    -->
+    <script>
+
+        //预解析
+        // console.log(num)  //出现undefine--在打印之前num已经定义好了--预解析
+        // var num = 100
+        // console.log(num)
+        // console.log(num1)  //报错--不能预解析
+        // let num1 = 100
+        // const num1 = 100
+        // console.log(num1)
+
+        //重名的变量
+        // var n1 = 100
+        // var n1 = 200 //不报错
+        // let n1 = 100 //报错
+        // let n1 = 200 
+        // const n1 = 100
+        // const n1 = 200 //报错
+
+        //块级作用域--任何一个可以执行代码段的{}都会限制该变量的使用范围
+        //感觉像var为全局变量，let和const为局部变量
+        // if (true){
+        //     var num = 100
+        //     console.log(num)
+        // }
+        // console.log(num)//两个都可以打印
+        // if (true){
+        //     let num = 100
+        //     console.log(num)
+        // }
+        // console.log(num)//报错
+
+
+        //赋值
+        // let num
+        // console.log(num)
+        // num = 100
+        // console.log(num)//不报错
+        // const num //报错
+        // console.log(num)
+        // num = 100
+        // console.log(num)
+
+
+        //修改
+        // let num = 100
+        // num = 200
+        // console.log(num)
+        const num = 100
+        num = 200  //报错
+        console.log(num)
+    </script>   
+    
+</body>
+</html>

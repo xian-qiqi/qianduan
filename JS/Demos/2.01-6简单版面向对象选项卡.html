@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul, ol, li{
+            list-style: none;
+        }
+
+        .tab{
+            width: 600px;
+            height: 400px;
+            border: 10px solid pink;
+            margin: 50px auto;
+            display: flex;
+            flex-direction: column;
+        }
+        ul{
+            height: 60px;
+            display: flex;
+        }
+        ul>li{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 40px;
+            background-color: skyblue;
+        }
+        ul>li.active{
+            background-color: orange;
+        }
+        ol{
+            flex: 1;
+            position: relative;
+        }
+        ol>li{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 100px;
+            color: white;
+            background-color: rgb(192, 122, 192);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+        ol>li.active{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab" id="box">
+        <ul>
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+        <ol>
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+        </ol>
+    </div>
+
+    <div class="tab" id="box1">
+        <ul>
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+        <ol>
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ol>
+    </div>
+
+    <script>
+        /*简单版面向对象选项卡
+            1、抽象内容
+            一个可以完成选项卡的对象，需要哪些属性和方法
+            属性：所有可以点击的按钮盒子  所有可以切换的选项盒子
+            方法：能添加的点击事件
+            2、书写构造函数
+            能创建一个对象，包含了两个属性和一个方法
+            属性直接写在构造函数内
+            方法写在构造函数的原型上prototype
+        
+        */
+
+        function Tabs(ele) {
+        //属性
+            //范围
+            this.ele = document.querySelector(ele)
+            //在范维内找到所有可以点击的盒子
+            // this.btns = this.ele.document.querySelectorAll('ul>li')错的
+            this.btns = this.ele.querySelectorAll('ul > li')
+            //在范围内找到所有需要切换的盒子
+            this.tabs = this.ele.querySelectorAll('ol > li')
+        }
+
+        //原型上--方法
+            Tabs.prototype.change = function(){
+                //执行给所有btns里面的按钮添加点击事件
+                //如何拿到btns
+                //绝对不能直接使用t这个变量,不能无法批量生产
+                // console.log(t.btns)
+                // console.log(t.tabs)
+
+                //使用this
+                //提前保存变量this（在本例中，即t变量）
+                var _this = this
+                
+                for(var i = 0; i < this.btns.length; i++){
+                    //提前保持索引
+                    this.btns[i].setAttribute('index', i)
+                    
+                    this.btns[i].addEventListener('click',function(){
+                        console.log('我被点击了！')
+                        //需要让实例的btns里面的每一个都没有active类名
+                        //需要让实例的tabs里面的每一个都没有active类名
+                        //这里已经不再change函数的作用域了，而是在是事件处理函数的作用域
+                        //在事件处理函数里面，this指向的当前事件源，即btns里面的每一个li
+                        console.log(this)
+                        
+                        //当你访问_this的时候，其实在访问变量this（即t）
+                        //自己作用域没有的时候，就会去上一次作用域查找
+                        console.log(_this)
+                        for(var j = 0; j < _this.btns.length; j++){
+                            //为什么使用i，循环j的意义在哪里？感觉多此一举
+                            _this.btns[j].className = ''
+                            _this.tabs[j].className = ''
+                        }
+                        //当前点击的这个li有active类名
+                        this.className = 'active'
+                        //让实例身上的tabs里面的索引对应的那一个li有active类名
+                        var index = this.getAttribute('index') - 0
+                        _this.tabs[index].className = 'active'
+
+
+                    }) 
+                }
+            }
+
+        var t = new Tabs('#box')//使用id
+        // var t = new Tabs('.tab')//使用类名
+        console.log(t)
+        //实例对象在调用函数
+        //函数内部的this就是指向 前面的对象
+        //则我在change函数里面写的this就是指代t
+        t.change()
+        console.log(t)
+        
+        //实现第二个选项卡
+        //使用id进行比类名作为实参更好，这样不需要修改第二个盒子的类名，可以直接使用之前定义好的样式，很方便
+        var t1 = new Tabs('#box1')//使用id
+        t1.change()
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            animation: run 2s steps(1,start) infinite;
+            /* 1表示一帧，一步到位 end表示保留当前帧（看不到动画最后一帧，动画一下就结束了） start保留下一帧(看不到第一帧，从第一帧很快跳到最后一帧)
+            steps(1,start)等价于steps-start
+            steps(1,end)等价于steps-end
+            */
+            
+            animation: run 2s steps(100,start) infinite;
+        }
+        @keyframes run {
+            0%{
+                background-color: red;
+            }
+            50%{
+                background-color: blue;
+            }
+            100%{
+                background-color: purple;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    steps, linear, ease-in,······
+      -->
+    <div></div>
+</body>
+</html>

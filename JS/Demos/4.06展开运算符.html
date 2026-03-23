@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*ES6的展开运算符
+            ...
+            作用：展开数组的[]或展开对象的{}
+
+            常见用处：1、合并数组  2、给函数传递参数
+                    3、用来复制对象
+        
+        */
+        console.log(100, 200, 300, 400)
+        var arr = [100, 200, 300, 400]
+        console.log(...arr)
+        //合并数组
+        // var arr1 = [10, 20] 
+        // var arr2 = [30, 40] 
+        // var arr3 = [50, 60] 
+        // var arr4 = [70, 80, 90] 
+        // var arr5 = [...arr1, ...arr2, ...arr3, ...arr4]
+        // console.log(arr5)
+ 
+        //给函数传递参数
+        var arr1 = [10, 20, 17, 7, 59, 23, 22]
+        var max = Math.max(arr1)//不行
+        var max = Math.max(10, 20, 17, 7, 59, 23, 22)
+        console.log(max)
+        var max = Math.max(...arr1)
+        console.log(max)
+
+        
+        var obj = {name: 'Jack', age: 18}
+        console.log(obj)
+        var obj1 = {
+            //复制对象,在有相同成员时，注意循序
+            ...obj,
+            gender: '男',
+            name: 'Rose'
+        }
+        console.log(obj1)
+
+    </script>
+
+
+</body>
+</html>

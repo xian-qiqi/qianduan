@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        .container{
+            height: 600px;
+            width: 912px;
+            margin: 0 auto;
+            /* background-color: bisque; */
+
+        }
+        .box{
+            width: 275px;
+            height: 275px;
+            border: 6px solid #cccccc;
+            position: relative;
+            float: left;
+            margin-right: 25px;
+            margin-bottom: 25px;
+            /* 图片超出box盒子了。解决方法
+            1.将box盒子width912改大一点
+            2.将最右边的边距设为margin 0 （最后一步）*/
+        }
+        .box .pic{
+            width: 100%;
+            height: 100%;
+            /* opacity: 0.7; */
+            /* 透明度 */
+            
+        }
+        .box .pic1{
+            height: 50px;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+        }
+        .box .anthor{
+            display: none;
+        }
+        .box:hover .anthor{
+            display: block;
+        }
+        .box p{
+            position: absolute;
+            left: 0;
+            top: 0;
+           color: pink;
+            display: none;
+            padding: 7px 5px;
+
+        }
+        .box:hover p{
+            display: block;
+        }
+        .box img{
+            width: 50px;
+            height: 50px;
+        }
+        
+        .box .text{
+           padding-left:50px;
+           padding-top: 10000px;/* 为啥无用 */
+           line-height: 50px;
+        }
+        .box:hover .pic{
+            opacity: 0.7;
+        }
+
+        .rightpic{
+            margin-right: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="yingxiao111.webp" alt="" class="pic"> 
+            <img src="dingweianli.png" alt="" class="pic1">
+            <img src="dingweianli2 (2).png" alt="" class="pic1 anthor"> 
+            <p>
+                <img src="dingweianlli3.gif" alt="">
+            </p>
+            <p >
+                <span class="text">我爱看,嘿嘿嘿嘿嘿</span>
+            </p>
+        </div>
+        <div class="box">
+            <img src="xiao111.jpg" alt="" class="pic"> 
+            <img src="dingweianli.png" alt="" class="pic1">
+            <img src="dingweianli2 (2).png" alt="" class="pic1 anthor"> 
+            <p>
+                <img src="dingweianlli3.gif" alt="">
+            </p>
+            <p class="p1">
+                <span class="text">我爱看,嘿嘿嘿嘿嘿</span>
+            </p>
+        </div>
+        <div class="box rightpic">
+            <img src="xiao222.jpg" alt="" class="pic"> 
+            <img src="dingweianli.png" alt="" class="pic1">
+            <img src="dingweianli2 (2).png" alt="" class="pic1 anthor"> 
+            <p>
+                <img src="dingweianlli3.gif" alt="">
+            </p>
+            <p class="p1">
+                <span class="text">我爱看,嘿嘿嘿嘿嘿</span>
+            </p>
+        </div>
+        <div class="box">
+            <img src="xiao333.jpg" alt="" class="pic"> 
+            <img src="dingweianli.png" alt="" class="pic1">
+            <img src="dingweianli2 (2).png" alt="" class="pic1 anthor"> 
+            <p>
+                <img src="dingweianlli3.gif" alt="">
+            </p>
+            <p class="p1">
+                <span class="text">我爱看,嘿嘿嘿嘿嘿</span>
+            </p>
+        </div>
+        <div class="box">
+            <img src="xiao444.jpg" alt="" class="pic"> 
+            <img src="dingweianli.png" alt="" class="pic1">
+            <img src="dingweianli2 (2).png" alt="" class="pic1 anthor"> 
+            <p>
+                <img src="dingweianlli3.gif" alt="">
+            </p>
+            <p class="p1">
+                <span class="text">我爱看,嘿嘿嘿嘿嘿</span>
+            </p>
+        </div>
+        <div class="box rightpic">
+            <img src="yingxiao222.webp" alt="" class="pic"> 
+            <img src="dingweianli.png" alt="" class="pic1">
+            <img src="dingweianli2 (2).png" alt="" class="pic1 anthor"> 
+            <p>
+                <img src="dingweianlli3.gif" alt="">
+            </p>
+            <p class="p1">
+                <span class="text">我爱看,嘿嘿嘿嘿嘿</span>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* input:enabled{
+            background: green;
+        } */
+        input:disabled{
+            background: rgb(204, 35, 13);
+        }
+        input:focus{
+            /* background: rgb(16, 182, 237); */
+        }
+
+        /* 匹配所用用户中处于选中状态的元素（如：勾选框） 
+        注意：checkbox具有默认样式，需先去除默认样式
+        */
+        input[type=checkbox]{
+            /* 去掉默认样式 */
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 1px solid black;
+            /* 去掉默认样式后，属于enable可用状态和focus聚焦状态 ，先注释enabled和focus去掉干扰*/
+        }
+        input:checked{
+            background: rgb(160, 32, 189);
+        }
+
+        div::selection{
+            background: rgb(163, 82, 193);
+            color: rgb(190, 37, 63);
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        用户名<input type="text"><br>
+        密码<input type="password"><br>
+        记住用户名<input type="checkbox"><br>
+        <input type="submit" disabled>
+    </form>
+
+    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore, porro deserunt obcaecati natus qui possimus, voluptates iste ipsam dolorem, quidem ex modi consequuntur officia impedit. Modi nisi provident saepe architecto.</div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 
+    引入JQuery文件---需要去官网下载JQuery文件,暂时不下载，使用官方CDN进行学习
+ -->
+<!-- 
+    JQuery:大型的简单的第三方类库
+        
+        DOM操作进行封装，ajax操作
+            当你引入JQuery时，会在全局暴露两个变量名
+            =》$
+            =》jQuery  两个变量一样，选择其中一个使用即可
+        语法：
+            选择器：$('选择器')
+            筛选器：$('选择器').筛选器名称()
+                first() next() last() nextAll() eq(索引) prev() prevAll() parent() parents() siglings() find(标签名)·····
+                操作元素文档内容：html() text() val()
+-->
+
+    <!-- ul>li*10{$}快捷写法 -->
+    <ul>
+        <li>1</li>
+        <li class="a">2</li>
+        <li>3</li>
+        <li class="b">4</li>
+        <li>5
+            <i>子两级</i>
+        </li>
+        <i>子一级</i>
+        <span>我是ul里的span标签</span>
+        <li class="a">6</li>
+        <li>7
+            <p>
+                <i>子三级</i>
+            </p>
+        </li>
+        <li id="box">8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        /*
+        */
+
+        console.log($)
+        console.log(jQuery)
+
+/*选择器*/
+        console.log($('.a')) //id选择器
+        console.log($('#box')) //类名选择器
+        console.log($('li')) //标签名选择器
+        console.log($('li:nth-child(odd)'))
+
+/*筛选器*/
+        console.log($('li').first()) //li里面的第一个
+        console.log($('li').last()) 
+        console.log($('li').eq(3)) //表示拿到索引3的标签
+        console.log($('span').next()) 
+        console.log($('span').nextAll()) 
+        //注意：获取的时该元素所有父级结构，逐层获取，知道html标签为止
+        console.log($('span').parents()) 
+        //拿到该元素的所有兄弟元素
+        console.log($('span').siblings())
+        //找到该元素所有后代元素中，满足要求的元素
+        console.log($('ul').find('i'))
+
+
+    </script>
+</body>
+</html>

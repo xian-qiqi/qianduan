@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            width: 600px;
+            height: 600px;
+            border: 3px solid gray;
+            margin: 10px auto;
+            transform-style: preserve-3d;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: rotateY(180deg) rotateX(0deg);
+            animation: run 3s linear infinite;
+        }
+        @keyframes run {
+            0%{
+                transform: rotateX(30deg) rotateY(30deg);
+            }
+            33.33%{
+                transform: rotateX(-300deg) rotateY(150deg);
+            }
+            66.66%{
+                transform: rotateX(-130deg) rotateY(-30deg);
+            }
+            100%{
+                transform: rotateX(30deg) rotateY(30deg);
+            }
+        }
+        .box div{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            line-height: 200px;
+            text-align: center;
+            font-size: 50px;
+            color: white;
+        }
+        .box div:nth-child(1){
+            background-color: rgb(223, 122, 122);
+            transform: translateZ(100px);
+        }
+        .box div:nth-child(2){
+            background-color: yellow;
+            transform: translateX(100px) rotateY(90deg);
+        }
+        .box div:nth-child(3){
+            background-color: rgb(224, 144, 23);
+            transform: translateY(-100px) rotateX(90deg);
+        }
+        .box div:nth-child(4){
+            background-color: green;
+            transform: translateY(100px) rotateX(-90deg);
+        }
+        .box div:nth-child(5){
+            background-color: rgb(44, 184, 126);
+            transform: translateX(-100px) rotateY(-90deg);
+        }
+        .box div:nth-child(6){
+            background-color: rgb(0, 217, 255);
+            transform: translateZ(-100px) rotateX(-180deg) rotateZ(180deg);
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+</html>

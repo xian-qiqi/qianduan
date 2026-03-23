@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        html,body{
+            height: 100%;
+        }
+        header,footer{
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            /* 文本居中 */
+            background-color: orange;
+        }
+
+        section{
+            display: flex;
+            height: calc(100% - 100px);
+            /* 必须用空格 */
+        }
+
+        nav,aside{
+            width: 100px;
+            height: 100%;
+            background-color: #ccc;
+            float: left;
+        }
+        main{
+            float: left;
+            flex: 1; /* 自动填充剩余空间 *//*解决下述问题： 使用 Flexbox 重构布局（注意section块要有display: flex）*/
+
+            /* height: calc(100% - 20px);
+            /* height: calc(100% - 19px); */
+/* 为什么-20px使main距离footer有空隙，-19px有多了，啊啊啊 */
+            /* width: calc(100% - 220px); */ 
+
+            background-color: white;
+            border: 10px solid #ccc;
+            box-sizing: border-box; /* 让border包含在width内 */
+        }
+        aside p{
+            font-size: 12px;
+            color: blue;
+        }
+        main .article1{
+            height: 60%;
+                      
+        }
+        main .article2{
+            height: 40%;  
+        }
+        
+
+    </style>
+</head>
+<body>
+    <!-- 四 html5 新增语义化标签
+section元素表示页面中的一个内容区块
+article元素表示一块与上下文无关的独立的内容
+aside元素在article之外的，与article内容相关的辅助信息
+header元素表示页面中一个内容区块或整个页面的标题
+footer元素表示页面中一个内容区块或整个页面的脚注
+nav元素表示页面中导航链接部分
+figure元素表示一段独立的流内容，使用figcaption元素为其添加标题（第一个子元素的位置）
+main元素表示页面中的主要的内容（ie不兼容） -->
+    
+    <!-- 语义化的作用：方便爬虫 -->
+    <!-- <img src="img/h5语义化解释图片.png" alt=""> -->
+
+    <header>header</header>
+    <section>
+        <nav>
+            <figure>nav</figure>
+            <ul>
+                <li>Link1</li>
+                <li>Link2</li>
+                <li>Link3</li>
+            </ul>
+        </nav>
+        
+        <main>
+            <div class="article1">
+                <header>Article Header</header>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis reiciendis voluptate id velit illo soluta enim sint, rem possimus quidem odio libero, animi assumenda architecto deleniti fuga consequuntur quasi tempore.</p>
+                <footer>Article Footer</footer>
+            </div>
+            <div class="article2">
+                <header>Article Header</header>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis reiciendis voluptate id velit illo soluta enim sint, rem possimus quidem odio libero, animi assumenda architecto deleniti fuga consequuntur quasi tempore.</p>
+                <footer>Article Footer</footer>
+            </div>
+        </main>
+
+        <aside>
+            <figure>Aside</figure>
+            <p calss="aside_p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, laboriosam. Ut vero molestiae excepturi officiis quibusdam impedit velit sit debitis reiciendis laboriosam nemo dolore eos est adipisci, id dolorem necessitatibus.</p>
+        </aside>
+    </section>
+    <footer>footer</footer>
+</body>
+</html>

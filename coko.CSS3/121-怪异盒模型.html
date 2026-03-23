@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 标准盒模型与怪异盒模型区别*/
+        .box1{
+            height: 200px;
+            width: 200px;
+            background: red;
+            margin-bottom: 100px;
+            padding: 30px;
+            border: 10px solid black;
+
+            box-sizing: content-box;
+            /* 标准盒模型 */
+            /* border和padding向外扩张，盒子height和width变大 */
+        }
+        .box2{
+            height: 200px;
+            width: 200px;
+            background: green;
+            padding: 30px;
+            border: 10px solid black;
+            box-sizing:border-box;
+            /* 怪异盒模型 */
+            /* border和padding向内压缩，盒子height和width不变 */
+        }
+/* 怪异盒模型优点--使用场景 */
+        .box{
+            height: 300px;
+            width: 900px;
+            background-color: yellow;
+            margin-top: 100px;
+        }
+
+        .box div{
+            height: 300px;
+            width: 300px;
+            float: left;
+            border: 1px solid green;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+
+        
+        .box4{
+            height: 100px;
+            width: 1000px;
+            background-color: rgb(255, 170, 0);   
+            margin: 100px;
+        }
+        .box4 div{
+            height: 100px;
+            width: 300px;
+            float: left;
+   
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+    <div class="box">
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sapiente exercitationem eligendi animi officiis amet sed! Blanditiis dicta, ipsam odio eaque possimus corrupti tenetur voluptate, necessitatibus quibusdam excepturi consectetur odit?</div>
+
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sapiente exercitationem eligendi animi officiis amet sed! Blanditiis dicta, ipsam odio eaque possimus corrupti tenetur voluptate, necessitatibus quibusdam excepturi consectetur odit?</div>
+
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sapiente exercitationem eligendi animi officiis amet sed! Blanditiis dicta, ipsam odio eaque possimus corrupti tenetur voluptate, necessitatibus quibusdam excepturi consectetur odit?</div>
+    </div>
+
+
+
+    <div class="box4">
+        <div>
+            <p>ationem eligendi</p>
+        </div>
+        <div>
+            <p>io eaque possimu</p>
+        </div>
+    </div>
+</body>
+</html>

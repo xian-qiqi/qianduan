@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* 属性选择器 [class,,]   选出所有具有class标签的*/
+        [class]{
+            background: rgb(131, 218, 131);
+        }    
+        /* 选出div中所有具有class标签的*/
+        div[class]{
+            background: rgb(113, 179, 233);
+        }  
+
+        p[class]{
+            background: rgb(232, 93, 93);
+        }
+
+        /*[class]（属性选择器）和 div[class]（带标签的属性选择器）的 优先级 比单纯的类选择器 .box1 更高  */
+        /* .box1{
+            background-color: rgb(213, 243, 95);
+        } */
+
+        /* 新增样式，不与[class]冲突 */
+        /* .box1{
+            border: 1px solid rgb(192, 54, 176);
+        } */
+         /* = 完全匹配 box3无法使用*/
+        div[class=box1]{
+            border: 1px solid rgb(192, 54, 176);
+        }
+        
+        /* 包含就匹配******** */
+        div[class~=box1]{
+            border: 1px solid rgb(192, 54, 176);
+        }
+        /*模糊匹配  
+        ^=b  开头是b就匹配
+        $=b  结尾是b就匹配
+        *=b  内容中包含b就匹配
+        */
+        div[class^="b"]{
+            color: rgb(241, 164, 30);
+        }
+        /* 要打双引号"" */
+        div[class$="3"]{
+            color: rgb(230, 34, 207);
+        }
+        div[class*="2"],p[class*="2"]{
+            color: rgb(108, 229, 15);
+        }
+
+
+        input[name]{
+            border: 1px solid rgb(97, 120, 220);
+            background: rgb(231, 182, 137);
+        }
+        input[type=tel]{
+            background-color: rgb(147, 214, 242);
+        }
+        input[type=number]{
+            background-color: rgb(112, 226, 166);
+        }
+          
+    </style>
+</head>
+<body>
+    <div class="box1">div-11111</div>
+    <div class="box2">div-22222</div>
+    <div >div-33333</div>
+    <div class="box1">div-44444</div>
+    <div class="box1 box3">div-55555</div>
+
+    <p class="p1">p-11111</p>
+    <p class="p2">p-22222</p>
+    <p >p-33333</p>
+    
+    <div>
+        <h1>注册界面</h1>
+        姓名：<input type="text" name="username"><br>
+        密码：<input type="password" name="password"><br>
+        年龄：<input type="number" ><br>
+        邮箱：<input type="email" name="email"><br>
+        手机：<input type="tel" ><br>
+    </div>
+    
+
+
+</body>
+</html>

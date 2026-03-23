@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!--获取
+时间Date   var time = new Date()创建时间对象
+var time = new Date(年，月，日，时，分，秒)
+
+1、时间对象.getFullYear() 获取时间对象中的年份信息
+2、时间对象.getMonth() 获取时间对象中的月份信息
+3、时间对象.getDate() 获取时间对象中的日期信息
+4、时间对象.getHours() 获取时间对象中的小时信息
+5、时间对象.getMinutes() 获取时间对象中的分钟信息
+6、时间对象.getSeconds() 获取时间对象中的秒钟信息
+7、时间对象.getDay() 获取时间对象中的星期信息0周日，1-6
+8、时间对象.getTime() 获取时间对象中的时间戳信息  时间戳：任意时间节点于格林威治时间（1970-1-1 0:0:0）的毫秒数
+     -->
+
+<!--  设置
+于获取时间方法相同，将get改为set，注意：设置 没有 设置 星期 方法
+
+1、时间对象.getFullYear(数字) 获取时间对象中的年份信息
+2、时间对象.getMonth(数字) 获取时间对象中的月份信息
+3、时间对象.getDate(数字) 获取时间对象中的日期信息
+4、时间对象.getHours(数字) 获取时间对象中的小时信息
+5、时间对象.getMinutes(数字) 获取时间对象中的分钟信息
+6、时间对象.getSeconds(数字) 获取时间对象中的秒钟信息
+
+7、时间对象.getTime(数字) 获取时间对象中的时间戳信息  时间戳：任意时间节点于格林威治时间（1970-1-1 0:0:0）的毫秒数
+     
+-->
+
+    <!-- <script>
+        var time = new Date()
+        console.log(time)
+        var month = time.getMonth()
+        console.log(month)//得到的是8， JavaScript 中月份从 0 开始计数的特性。
+
+        var date = time.getDate()
+        console.log(date)
+
+        var ms = time.getTime()
+        console.log(ms)
+    </script> -->
+
+
+    <!-- 案例：封装函数，获取两个时间节点之间的时间差 -->
+     <script>
+
+        function get_Diff(t1,t2){
+            var ms1 = t1.getTime()
+            var ms2 = t2.getTime()
+            //得到秒数
+            var sub =Math.abs( (ms2 - ms1)/1000 ) 
+            //得到天数
+            var day = Math.floor( sub / ( 60 * 60 * 24 ) )
+            
+            //得到相差的小时数
+            var hours = Math.floor( sub%( 60*60*24 )/(60*60) )
+            
+            //得到相差的分钟数
+            var minutes = Math.floor( sub%( 60*60)/60)
+            
+            //得到相差的小时数
+            var seconds = sub%60
+            return {day: day, hours: hours, minutes: minutes, seconds: seconds}
+            
+        }
+
+        var t1 = new Date(2025, 9, 14, 16, 1, 55)
+        var t2 = new Date(2025, 11, 12, 16, 1, 55)
+        var res = get_Diff(t1, t2)
+        console.log(res)
+     </script>
+</body>
+</html>

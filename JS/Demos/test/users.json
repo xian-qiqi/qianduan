@@ -1,0 +1,45 @@
+{
+    "users_db": [
+        {
+            "id": 1,
+            "username": "admin",
+            "password": "123456",
+            "nickname": "管理员",
+            "age": "30",
+            "gender": "女",
+            "identity": "管理员",
+            "createTime": 1633493174291
+        },
+        {
+            "id": 2,
+            "username": "train",
+            "password": "train123",
+            "nickname": "training",
+            "age": "20",
+            "gender": "女",
+            "identity": "学生",
+            "createTime": 1633493174291
+        },
+        {
+            "id": 3,
+            "username": "test",
+            "password": "test123",
+            "nickname": "test1",
+            "age": "25",
+            "gender": "男",
+            "identity": "tester",
+            "createTime": 1633493174291
+        },
+        {
+            "id": 4,
+            "username": "xian",
+            "password": "xian123",
+            "nickname": "xian",
+            "age": "22",
+            "gender": "女",
+            "identity": "学生",
+            "createTime": 1760426546008,
+            "updateTime": 1760427352979
+        }
+    ]
+}

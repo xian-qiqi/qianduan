@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box1{
+            /* 图片大小 */
+            width: 1000px;
+            height: 1000px;
+            background-color: yellow;
+            background-image: url(img/d2a8da55620e9107c1da76df64fd0357.jpg);
+            background-repeat: repeat-x;
+
+            /* repeat默认平铺
+            repeat-x：x轴平铺
+            repeat-y：y轴平铺
+            no-repeat：不平铺 */
+            background-position: right center;
+            /* 1.20px 20px
+            2.10% 10%
+            3.水平：left center right
+              竖直：top center bottom */
+        }
+
+        .box2{
+            /* 图片较大 */
+            width: 300px;
+            height: 300px;
+            background-color: yellow;
+            background-image: url(img/图片1.png);
+            /* 默认平铺 */
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+
+        .box3{
+            width: 300px;
+            height: 300px;
+            background-color: yellow;
+            background-image: url(img/图片1.png);
+            background-size: 100% 100%; 
+           
+            
+            /* cover 把背景图像扩展至足够大，以使背景图像完全覆盖背景区域 。可能改变图片的比例*/
+            /* contain 把图像扩展至最大尺寸，以使其宽度和高度完全适应内容区域。铺不满盒子，要留白。 */
+        }
+
+        .box4{
+            width: 300px;
+            height: 300px;
+            background-color: yellow;
+            background-image: url(img/图片1.png);
+            /* background-size: 100% 100%; */
+            background-size: cover;
+            
+        }
+
+        .box5{
+            width: 300px;
+            height: 300px;
+            background-color: yellow;
+            background-image: url(img/图片1.png);
+            /* background-size: 100% 100%; */
+            background-size: contain;
+            background-repeat: no-repeat;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    
+</body>
+</html>

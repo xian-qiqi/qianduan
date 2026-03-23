@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <button>开始动画</button>
+    <div></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        /*
+        综合动画
+            animate（）
+            第一个参数：要运动的样式，以一个对象数据类型
+            第二个参数：运动时间
+            第三个参数：运动曲线
+            第四个参数：运动结束的回调函数
+
+            注意：关于颜色相关的样式是不能运动的
+            关于transform相关的样式是不能运动的
+        */
+        var div = document.querySelector('div')
+        $('button').click(function(){
+            $('div').animate({
+                width: 300,
+                height: 500,
+                'background-color': 'pink',
+                transfrom: 'rotate(45deg)',
+                top: 100,
+                left: 100,
+                'border-radius': '50%'
+            },1000,'linear',function(){console.log('运动结束了')})
+
+            div.style.transform = 'rotate(45deg)'
+            div.style.transition = 'all 2s'
+        })
+
+        
+    </script>
+</body>
+</html>

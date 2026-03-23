@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        ul{
+            width: 600px;
+            height: 400px;
+            margin: 10px auto;
+            border: 5px solid gray;
+            position: relative;
+        }
+        li{
+            height: 200px;
+            width: 60px;
+            position: absolute;
+            left: 50%;
+            margin-left: -30px;
+            bottom: 30px;
+            text-align: center;
+            transform-origin: bottom center;
+            border-radius: 10px;
+            transition: all 2s;
+        }
+        ul li:not(:nth-child(7)){
+            /* 除了第七个都是透明的 */
+            opacity: 0;
+        }
+        ul:hover li{
+            opacity: 1;
+        }
+        ul li:nth-child(1),ul li:nth-child(13){
+            background-color: rgb(10, 27, 212);
+        }
+        ul li:nth-child(2),ul li:nth-child(12){
+            background-color: rgb(19, 129, 226);
+        }
+        ul li:nth-child(3),ul li:nth-child(11){
+            background-color: rgb(22, 218, 211);
+        }
+        ul li:nth-child(4),ul li:nth-child(10){
+            background-color: rgb(21, 188, 143);
+        }
+        ul li:nth-child(5),ul li:nth-child(9){
+            background-color: rgb(20, 227, 58);
+        }
+        ul li:nth-child(6),ul li:nth-child(8){
+            background-color: rgb(194, 230, 50);
+        }
+        ul li:nth-child(7){
+            background-color: rgb(219, 173, 22);
+        }
+        ul:hover li:nth-child(1){
+            transform: rotate(90deg);
+        }
+        ul:hover li:nth-child(13){
+            transform: rotate(-90deg);
+        }
+        ul:hover li:nth-child(2){
+            transform: rotate(75deg);
+        }
+        ul:hover li:nth-child(12){
+            transform: rotate(-75deg);
+        }
+        ul:hover li:nth-child(3){
+            transform: rotate(60deg);
+        }
+        ul:hover li:nth-child(11){
+            transform: rotate(-60deg);
+        }
+        ul:hover li:nth-child(4){
+            transform: rotate(45deg);
+        }
+        ul:hover li:nth-child(10){
+            transform: rotate(-45deg);
+        }
+        ul:hover li:nth-child(5){
+            transform: rotate(30deg);
+        }
+        ul:hover li:nth-child(9){
+            transform: rotate(-30deg);
+        }
+        ul:hover li:nth-child(6){
+            transform: rotate(15deg);
+        }
+        ul:hover li:nth-child(8){
+            transform: rotate(-15deg);
+        }
+        
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+    </ul>
+</body>
+</html>

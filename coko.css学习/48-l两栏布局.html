@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 方案一*/
+        html,body{
+            height: 100%;
+        }
+
+        .box1{
+            width: 200px;
+            height: 100%;
+            background-color: lightblue;
+            float: left;
+        }
+        .box2{
+            /* width: 100%; */
+            /* 不能设置宽度100%，原因不好解释，
+            宽度设置为100%时，页面整体宽度为200px＋宽度100%，页面下面有滚动条。 */
+            height:100%;
+            background-color: aquamarine;
+            margin-left: 200px; 
+        }
+
+
+        /* 方案二 */
+        html,body{
+            height: 100%;
+        }
+
+        .box1{
+            width: 200px;
+            height: 100%;
+            background-color: lightblue;
+            float: left;
+            
+        }
+        .box2{
+            width: calc(100% - 200px);
+            /* calc运算符号前面必须留空格 */
+            height:100%;
+            background-color: aquamarine;
+            float: left;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+</body>
+</html>

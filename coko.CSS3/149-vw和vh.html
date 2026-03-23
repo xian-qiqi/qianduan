@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            /* font-size: 100px; */
+            /* 
+            375px = 100vw
+            1px = 0.2667vw
+             */
+            font-size: 26.67vw;
+        }
+        div{
+            height: 100px;
+            width: 3.75rem;
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 
+    vh  view-height
+    100vh = 视口的高度
+
+    vw  view-width
+    100vw = 视口的宽度
+    不同设备的视口宽度和视口高度不同
+
+    可以使用vw和vh代替rem中js部分代码 （document.documentElement.style.fontSize=document.documentElement.clientWidth/750 * 20 + 'px'）
+
+
+    100%与100vh与vw的关系：width: 100%;  width: 100vw;
+        没有滚动条的时候100vh = 100%
+        有滚动条时，100vw包含滚动条的窗口大小，100%刨除滚动条，战剩余的空间
+     -->
+
+     <div>
+
+     </div>
+</body>
+</html>

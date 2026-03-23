@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="font\font-荧魈圈\font\iconfont.css">
+
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        ul{
+            list-style: none;
+        } 
+        html{
+            font-size: 20px;
+        }
+        body{
+            /* width: 16rem; */
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+        }
+        
+/* header */
+        header{
+            height: 2.2rem;
+            background-color: #0cc440;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header div{
+            height: 1.25rem;
+            width: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* line-height: 100%; 没用，line-height根据font-size进行居中设置，修改为line-height: 1.25rem;可行，但设置移动端不推荐具体数值进行设计
+            text-align: center; */
+            font-size: .6rem;
+            color: #a9e4b4;
+            background-color: #3dd066;
+        }
+        /* .h-box1{
+            border-radius: .65rem 0 0 .65rem;
+        } 
+        .h-box2{
+            border-radius: 0 .65rem .65rem 0;
+        }*/
+        header div:nth-child(1){
+            border-radius: .65rem 0 0 .65rem;
+        }
+        header div:nth-child(2){
+            border-radius: 0 .65rem .65rem 0;
+            
+        }
+
+        /*无法使用
+电脑端（鼠标设备）：鼠标可以在元素上悬停（hover），触发 :hover 样式。
+移动端（触摸屏设备）：用户通过 点击（触摸） 操作，没有“悬停”的概念，
+        */
+        header div:hover{
+            color: white;
+            background-color: #63d985;
+            
+        } 
+        
+/* section */
+        section{
+            flex: 1;
+            overflow: auto;
+            /* 溢出自动滚动 */
+            
+        }
+        section ul{
+            /* 使该板块固定 */
+            position: sticky;
+            top: 0rem;
+            background-color: white;
+            display: flex;
+            /* height: 1.75rem;
+            justify-content: space-around; 
+            align-items: center; */
+        }
+        section ul li{
+            flex: 1; 
+            height: 1.75rem;
+            text-align: center;
+            line-height: 1.75rem;
+            border-bottom: .05rem solid #d9d9d9;
+            color: #8c8c8c;
+            font-size: .7rem;
+        }
+        section ul li:hover{
+            color: #14bf4d;
+            border-bottom: .2rem solid #08c63e;
+        }
+        section .list{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        section .list div{
+            width: 49%;
+            margin-top: .2rem;
+            border: .05rem solid #d5d5d7;
+            /* color: ; */
+            background-color: white;
+        }
+        section .list div img{
+            width: 100%;
+        }
+        section .list div p{
+            height: 1.5rem;
+            line-height: 1.5rem;
+            font-size: .6rem;
+            text-indent: .5rem;
+        }
+/* footer */
+        footer{
+            height: 2.2rem;
+            background-color: white;
+            
+        }
+        footer ul{ 
+            display: flex;
+            height: 100%;
+        }
+        footer li{
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            justify-content: center;
+            color: #8c8c8c;
+        }
+        footer li i{
+            height: 1.05rem;
+            font-size: .8rem;
+            text-align: center;
+            line-height: 1.05rem;
+        }
+        footer li span{
+            height: .85rem;
+            font-size: .6rem;
+            text-align: center;
+            line-height: .85rem;
+        }
+        footer ul li:hover{
+            color: #08ca43;
+        }
+        footer li:nth-child(3){
+            position:relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        footer li:nth-child(3) i{
+            height: 2.5rem;
+            width: 2.5rem;
+            border: .05rem solid #dadada;
+            border-radius: 50%;
+            position: absolute;
+            font-size: 1.5rem;
+            text-align: center;
+            line-height: 2.5rem;
+            background-color: white;
+        }
+        .iconfont{
+            font-size: .8rem;
+        }
+    </style>
+
+    <script>
+        document.documentElement.style.fontSize=document.documentElement.clientWidth/320 * 20 + 'px'
+    </script>
+</head>
+<body>
+    <header>
+        <div class="h-box1">热点</div>
+        <div class="h-box2">关注</div>
+    </header>
+
+    <section>
+        <ul>
+            <li>荧魈同人图</li>
+            <li>超话</li>
+            <li>信息</li>
+        </ul>
+        <div class="list">
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\z1.jpg" alt="">
+                <p>荧魈</p>
+            </div>
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\z2.jpg" alt="">
+                <p>荧</p>
+            </div>
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\z3.jpg" alt="">
+                <p>荧魈</p>
+            </div>
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\z4.jpg" alt="">
+                <p>荧魈</p>
+            </div>
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\z5.jpg" alt="">
+                <p>荧魈</p>
+            </div>
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\z6.jpg" alt="">
+                <p>荧魈</p>
+            </div>
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\z7.jpg" alt="">
+                <p>魈</p>
+            </div>
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\2.png" alt="">
+                <p>荧魈</p>
+            </div>
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\xiaoxiao.jpg" alt="">
+                <p>魈</p>
+            </div>
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\0323d0db88d55b69eb6dae186ba765ad.jpg" alt="">
+                <p>荧</p>
+            </div>
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\Jrd0QqWq00mEz4L7zYgGhw844c35cbadc6c342ba4055c7f14d5351.jpg" alt="">
+                <p>荧魈</p>
+            </div>
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\u=1027373898,3807772898&fm=253&app=138&f=JPEG.jpg" alt="">
+                <p>荧魈</p>
+            </div>
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\u=1152919078,2204862013&fm=253&app=138&f=JPEG.jpg" alt="">
+                <p>荧魈</p>
+            </div>
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\u=1678765238,696089853&fm=253&app=138&f=JPEG.jpg" alt="">
+                <p>荧魈</p>
+            </div>
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\v2-0bed35d9c85d9ab5babef30812715125_1440w.jpg" alt="">
+                <p>荧</p>
+            </div>
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\u=4141318709,809878795&fm=253&app=138&f=JPEG.jpg" alt="">
+                <p>荧魈</p>
+            </div>
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\2b907e736fcf35c0cee562fae90569974318.jpg" alt="">
+                <p>荧魈</p>
+            </div>
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\u=3213775268,207028061&fm=253&app=138&f=JPEG.jpg" alt="">
+                <p>荧魈</p>
+            </div>
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\v2-67bc81022586dd0db25ee10fcba3d4c1_1440w.jpg" alt="">
+                <p>荧</p>
+            </div>
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=6674493468599372425&skey=@crypt_27f349a5_7c9169922ba25a8873dd512b72329e97&mmweb_appid=wx_webfilehelper.jpg" alt="">
+                <p>荧</p>
+            </div>
+            
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\u=212713889,682535692&fm=253&app=138&f=JPEG.jpg" alt="">
+                <p>魈</p>
+            </div>
+            
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\src=http___safe-img.xhscdn.com_bw1_eb6a9220-06a3-4be9-9e5e-78c967ccf6ef_imageView2_2_w_1080_format_jpg&refer=http___safe-img.xhscdn.jpg" alt="">
+                <p>荧魈</p>
+            </div>
+            
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\6.jpg" alt="">
+                <p>魈</p>
+            </div>
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\u=2996114176,2091795373&fm=253&app=138&f=JPEG.jpg" alt="">
+                <p>荧魈</p>
+            </div>
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\6 (2).jpg" alt="">
+                <p>魈</p>
+            </div>
+
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\d000baa1cd11728b1135851686f325c2c3fd2c81.jpeg" alt="">
+                <p>荧</p>
+            </div>
+            
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font/font-荧魈圈/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=4367489800434859957&skey=@crypt_27f349a5_7c9169922ba25a8873dd512b72329e97&mmweb_appid=wx_webfilehelper.jpg" alt="">
+                <p>荧</p>
+            </div>
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\src=http __ci.xiaohongshu.com_3c4a320b-7b95-a444-5988-74fbcaa33b33 imageView2_2_w_1080_format_jpg&refer=http __ci.xiaohongshu.jpg" alt="">
+                <p>魈</p>
+            </div>
+            
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\u=2267353697,3457479460&fm=253&fmt=auto&app=138&f=JPEG.jpg" alt="">
+                <p>魈</p>
+            </div>
+            <div>
+                <!-- <img src=font\font-荧魈圈\z1.jpg></img> -->
+                <img src="font\font-荧魈圈\_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=5993611753428479636&skey=@crypt_27f349a5_7c9169922ba25a8873dd512b72329e97&mmweb_appid=wx_webfilehelper.jpg" alt="">
+                <p>荧</p>
+            </div>   
+        </div>
+    </section>
+
+    <footer>
+        <ul>
+            <li>
+                <i class="iconfont icon-shouye-shouye"></i>
+                <span>首页</span>
+            </li>
+            <li>
+                <i class="iconfont icon-search"></i>
+                <span>发现</span>
+            </li>
+            <li>
+                <i class="iconfont icon-24gf-camera2"></i>
+            </li>
+            <li>
+                <i class="iconfont icon-wodedangxuan"></i>
+                <span>我的</span>
+            </li>
+            <li>
+                <i class="iconfont icon-tuichu"></i>
+                <span>退出</span>
+            </li>
+        </ul>
+        
+    </footer>
+</body>
+</html>

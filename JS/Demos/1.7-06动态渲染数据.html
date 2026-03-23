@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 300px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- <thead> 是 HTML 表格中的一个重要结构，它用于定义表格的表头部分。
+核心作用是：将表格的列标题（如 ID、姓名、性别）与主体数据（tbody）和页脚（tfoot）清晰地分离开来。
+ <tr> (表格行) 元素，每行再由 <th> (表头单元格) 或 <td> (数据单元格) 组成
+ -->
+    <table border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>姓名</th>
+                <th>性别</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- JS渲染 -->
+        </tbody>
+    </table>
+
+    <script>
+        var users = [
+            {id: 1, name: '小美', age: 18},
+            {id: 2, name: '小帅', age: 18},
+            {id: 3, name: '小乖', age: 5}
+        ]
+        //获取tbody标签
+        var tbody = document.querySelector('tbody')
+
+        //循环遍历useers的数据
+        users.forEach(function(item){
+            console.log(item)
+            //每一个对象生成tr标签，tr行
+            var tr = document.createElement('tr')
+            //循环遍历item
+            for (var key in item){
+                var td = document.createElement('td')
+                // td.innerText = item[key]
+                td.innerHTML = item[key]
+                tr.appendChild(td)
+            }
+            tbody.appendChild(tr)
+        })
+    </script>
+</body>
+</html>

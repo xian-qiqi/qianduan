@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            height: 200px;
+            width: 200px;
+            background-color: pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .center{
+            height: 100px;
+            width: 100px;
+            background-color: skyblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .inner{
+            height: 50px;
+            width: 50px;
+            background-color: plum;
+        }
+
+        ul{
+            width: 300px;
+            height: 100px;
+            background-color: orange;
+            display: flex;
+            align-items: center;
+            /* 消除默认padding */
+            padding: 0;
+        }
+        ul>li{
+            height: 50px;
+            width: 50px;
+            background-color: yellow;
+            list-style: none;
+            line-height: 50px;
+            text-align: center;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 阻止事件传播
+    事件对象.stopPropagation() 
+    -->
+
+    <!-- 事件委托
+
+     利用事件冒泡方式，把自己的事件委托给父级中的某一层
+    -->
+    <div class="outer">
+        <div class="center">
+            <div class="inner"></div>
+        </div>
+    </div>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    
+    <script>
+        var outer = document.querySelector('.outer')
+        var center = document.querySelector('.center')
+        var inner = document.querySelector('.inner')
+
+        //绑定点击事件
+        outer.onclick = function(){ console.log('我是outer元素，我被点击了') }
+        center.onclick = function(){ console.log('我是center元素，我被点击了') }
+        inner.onclick = function(e){ 
+            e.stopPropagation()
+            console.log('我是inner元素，我被点击了') 
+        }
+
+//事件委托
+        var ul = document.querySelector('ul')
+        ul.onclick = function(e){
+            console.log('点击事件触发')
+            console.log(e.target)
+            // 点击li，触发li标签
+            // 点击ul，触发ul标签
+            if (e.target.tagName === 'LI') {
+                console.log('你点击的是li标签')
+            }
+        }
+    </script>
+</body>
+</html>

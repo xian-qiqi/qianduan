@@ -1,0 +1,33 @@
+<!--
+ * @作者: kerwin
+ * @公众号: 大前端私房菜
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>聊天室</h1>
+
+    <script>
+        //axios.get
+        var ws = new WebSocket("ws://localhost:8080")
+
+        ws.onopen = ()=>{
+            console.log("连接成功")
+        }
+
+        ws.onmessage = (msgObj)=>{
+            console.log(msgObj.data)
+        }
+
+        ws.onerror  =()=>{
+            console.log("error")
+        }
+        //ws.send(
+    </script>
+</body>
+</html>

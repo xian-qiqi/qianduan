@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            height: 200px;
+            width: 940px;
+           
+            background-color: red;
+            margin: 0 auto;
+        }
+
+        .box div{
+            float: left;
+            width: 300px;
+            height: 200px;
+            background-color: rgb(63, 227, 63);
+            margin-right: 20px;
+        }
+        /* 使用class选择最后一个div */
+        /* .box div.last{
+            margin-right: 0;
+        } */
+
+        /* 使用last-child选择最后一个div */
+        .box div:last-child{
+            margin-right: 0;
+        }
+
+        li:first-child{
+            background-color: yellow;
+        }
+        li:last-child{
+            background-color: rgb(55, 178, 84);
+        }
+        li:nth-child(3){
+            background-color: rgb(208, 133, 42);
+        }
+        /* 同 li:nth-child(2n)*/
+        li:nth-child(even){
+            background-color: rgb(31, 108, 215);
+        }
+
+        .box1{
+            border: 1px solid red;
+            
+        }
+        
+        .box1 div p:only-child{
+            background-color: rgb(41, 145, 201);
+        }
+        .box1 div:empty{
+            background-color: rgb(209, 231, 42);
+        }
+
+        .box2 div{
+            height: 30px;
+            background-color: rgb(181, 99, 113);
+        }
+        .box2 div:empty{
+            background-color: rgb(162, 40, 60);
+        }
+
+    /* root 
+    等同于
+    html,body
+    */
+        :root,body{
+            height: 100%;
+            background: rgb(249, 162, 2);
+        }
+    </style>
+</head>
+<body>
+    <!--
+    结构性伪类选择器
+x:first-child匹配子集的第一个元素。ie7就可以支持
+x:last-child匹配父元素中最后一个x元素
+x:nth-child(n)用于匹配索引值为n的子元素（n从0开始）。索引值从1开始nth-child(2n)偶数(even)，nth-child(2n-1)奇数(odd)
+x:onlychild这个伪类一般用的比较少，比如上述代码匹配的是div下的有且仅有一个的p,也就是说，如果div内有多个p,将不匹配。
+x:root匹配文档的根元素。在html(标准通用标记语言下的一个应用）中，根元素永远是html
+x:empty匹配没有任何子元素（包括包含文本）的元素x(空格，回车符都不能有)
+    -->
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div class="last"></div>
+    </div>
+
+    <ul>
+        <li>1111111</li>
+        <li>2222222</li>
+        <li>3333333</li>
+        <li>4444444</li>
+        <li>5555555</li>
+        <li>6666666</li>
+        <li>7777777</li>
+    </ul>
+
+    <!-- onlychild -->
+    <div class="box1">
+        <div>
+            <p>111</p>
+            <p>222</p>
+        </div>
+        
+        <div>
+            <p>333</p>
+        </div>
+
+        <div>444</div>
+        
+        <div></div>
+    </div>
+
+<!-- empty -->
+    <div class="box2">
+        <div>444</div> 
+
+        <div>
+        </div>
+
+        <div></div>
+    </div>
+    
+
+<!-- 根节点的选择器root -->
+    
+</body>
+</html>

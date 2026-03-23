@@ -1,0 +1,31 @@
+<!--
+ * @作者: kerwin
+ * @公众号: 大前端私房菜
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    home-页面
+    
+    <%-include("./header.ejs",{isShowTitle:true})  %>  <!-- *导入公共文件 -->
+    <!-- *传入参数 isShowTitle:true  默认true-->
+    <ul>
+        <!-- <% %>里面的内容，相当于js语法，没使用即普通的html语法 -->
+       <%for(var i=0;i<list.length;i++){ %>
+           <li><%- list[i]%></li>
+       <% } %>
+    </ul>
+
+    <div>最新消息-<%= myhtml%></div>
+    <div>最新消息-<%- myhtml%></div>
+
+    <!-- 我是注释 <div>111111</div> -->
+
+    <%# dwadwadwadwadwadwadwadwadwadwadwadwadwa%这种注释在浏览器检查时不会显示出来 %>
+</body>
+</html>

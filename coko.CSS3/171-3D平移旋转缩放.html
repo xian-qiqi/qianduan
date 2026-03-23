@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    /* 平移 */
+        .box1{
+            width: 500px;
+            height: 500px;
+            border: 5px solid pink;
+            transform-style: preserve-3d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            /* transform: rotateY(30deg); */
+            /* 景深 */
+            perspective: 900px;
+        }
+        .center1{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(81, 212, 245);
+            /* Z轴 */
+            transform: translateZ(100px);
+            transition: all 2s;
+        }
+        .box1:hover .center1{
+            transform: translateZ(600px);
+        }
+
+    /* 旋转 */
+        .box2{
+            width: 500px;
+            height: 500px;
+            border: 5px solid pink;
+            display: flex;
+            transform-style: preserve-3d;
+            transform: rotateY(30deg);
+        }
+        .center2{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(81, 212, 245);
+            margin: auto;
+            transform: rotateX(30deg);
+            transform: rotate3d(1,1,1,30deg);
+            /* xyz轴分别旋转30deg */
+        }
+    /* 缩放 */
+        .box3{
+            width: 500px;
+            height: 500px;
+            border: 5px solid pink;
+            display: flex;
+            transform-style: preserve-3d;
+            perspective: 800px;
+        }
+        .center3{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(81, 212, 245);
+            margin: auto;
+            /* 加上景深 */
+            /* scaleZ()  和scale3d()单独使用没有用，需要配合其他变形函数才有效果 
+            scale(sx,sy,sz)
+            */
+            transform: scaleZ(2) rotate(30deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- 3D  : transfrom-style: preserve-3d; 
+        flat: 2D舞台
+        preserve-3d: 3d舞台
+     
+     景深：perspective在程序中实现近大远小的效果，当没设置景深时，视物体与视线无穷远，在视觉上translateZ的改变无法使物体产生近大远小的效果，数值通常设置在900-1200之间
+     perspective:1200px;在父元素中使用
+     transform:perspective(1200px) 在子元素中使用
+
+     perspective-origin: center center;中心
+     perspective-origin: left top;左上角
+     perspective-origin: 100% 100%;右下角
+
+     总结：Z轴配合景深才会有效果
+     -->
+
+
+    <!-- 平移 -->
+    <div class="box1">
+        <div class="center1"></div>
+    </div>
+
+    <!-- 旋转 -->
+    <div class="box2">
+        <div class="center2"></div>
+    </div>
+    <!-- 缩放 -->
+    <div class="box3">
+        <div class="center3"></div>
+    </div>
+</body>
+</html>

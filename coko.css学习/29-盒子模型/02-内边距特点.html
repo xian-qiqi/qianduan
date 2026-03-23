@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 
+        1.背景色可以蔓延到内边距 
+        2.可以设置单一方向吗（某一边内边距有背景色）？
+        padding-方向：top left right bottom
+        */
+
+        div{
+            width: 300px;
+            height: 300px;
+            /* padding: 30px 0 0 0; */
+            padding-top: 10px; 
+            padding-bottom: 20px;
+
+            background-color: yellow;
+        }
+
+        ul{
+            padding-left: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias eius neque temporibus libero eligendi dicta similique debitis recusandae ea! Voluptatibus nostrum blanditiis sint? Voluptates eveniet, quo non amet perferendis quibusdam.
+    </div>
+
+    <ul>
+        <!-- 默认40左内边距 -->
+        <li>11111</li>
+        <li>22222</li>
+        <li>33333</li>
+    </ul>
+    
+</body>
+</html>

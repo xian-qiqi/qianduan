@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            height: 300px;
+            background-color: yellow;
+            /* 显示的列数： column-count: 5;*/
+            column-count: 5;
+            /* 调整列间距 */
+            column-gap: 30px;
+            /* 列边框 */
+            column-rule: 2px solid red;
+            /* 列高度统一属性
+            balance
+            auto把父盒子占满 */
+            /* column-fill: auto; */
+            
+            /*  调整列宽*/
+            /* column-width: 300px; */
+
+            
+        }
+        div>h1{
+            /* 横跨所有的列 */
+            column-span: all;
+            text-align: center;
+            letter-spacing: 50px; /* 使用letter-spacing实现文字间隔 */
+            padding-left: 25px; /* 补偿letter-spacing的不对称性 */
+            
+        }
+       
+    </style>
+</head>
+<body>
+    
+    <div>
+        <h1>赵钱孙李</h1>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut sed distinctio alias repellat quaerat explicabo mollitia. Possimus dolorem tempore fuga expedita perferendis officia! Adipisci officia ipsa culpa, earum saepe architecto?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae exercitationem repellendus delectus quasi, cum sint inventore eaque fugit aut? Odio alias quae nihil soluta corrupti perferendis aliquid quo sequi nulla.
+    Cumque iusto eaque rem ipsam ipsum in odio odit porro error fuga magni autem, temporibus mollitia reprehenderit culpa omnis, impedit aperiam corrupti totam at ducimus. Accusantium itaque recusandae reprehenderit quis.
+    Quae ratione assumenda atque? Inventore laborum totam cumque placeat modi dolore voluptate quasi, qui consequuntur omnis temporibus consequatur eligendi saepe officia? Excepturi eligendi alias facilis! Harum aliquam inventore optio aliquid!
+    Aperiam praesentium, quos ullam nam, ex exercitationem hic cupiditate unde alias beatae aliquam facere assumenda autem fugiat cumque? Voluptatem ad molestias velit eum est optio commodi omnis alias! Labore, deserunt!
+    Ipsam dolorum officiis beatae iste repellat eaque id quia fuga velit quae, consectetur eveniet numquam. Praesentium blanditiis illo aspernatur illum repellendus libero quos, vel aperiam totam, earum ratione, ipsam optio.
+    </div>
+</body>
+</html>

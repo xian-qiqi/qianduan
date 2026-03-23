@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*子代选择器 */
+        .box>li{
+            border: 1px solid red;
+        }
+        /* + 当前元素后面的第一个兄弟  */
+        .child+li{
+            background: yellow;
+        }
+
+        /* ~ 当前元素后面的所有亲兄弟  */
+        .child~li{
+            background: yellow;
+        }
+
+        .container+p{
+            background: rgb(100, 100, 175);
+        }
+
+        .container~p{
+            background: rgb(100, 100, 175);
+        }
+
+
+    </style>
+</head>
+<body>
+    <ul class="box">
+        <li>1111
+            <ul>
+                <li>1111</li>
+                <li>2222</li>
+                <li>3333</li>
+            </ul>
+        </li>
+        <li class="child">2222</li>
+        <li>3333</li>
+        <li>4444</li>
+        <li>5555
+            <ul>
+                <li>1111</li>
+                <li>2222</li>
+                <li>3333</li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="container">11111</div>
+    <p>p-22222</p>
+    <p>p-33333</p>
+    <div>
+        <p>p-44444</p>
+    </div>
+</body>
+</html>

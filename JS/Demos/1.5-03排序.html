@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 冒泡排序 -->
+    <!-- <script>
+        var arr = [9,3,6,2,4,1,8,5,7]
+        console.log(arr)
+        document.write(arr)
+        for(var i=0;i<arr.length-1;i++){
+            for(var j=0;j<arr.length-1-i;j++){
+                if(arr[j]>arr[j+1]){
+                    var temp = arr[j]
+                    arr[j] = arr[j+1]
+                    arr[j+1] = temp
+                }
+            }
+        }
+        document.write('</br>')
+        console.log(arr)
+        document.write(arr)
+    </script> -->
+
+<!-- 选择排序 -->
+    <script>
+        var arr = [9,3,6,2,4,1,8,5,7]
+        console.log(arr)
+        document.write(arr)
+        // for(var i=0;i<arr.length-1;i++){
+            
+        //     for(var j=i+1;j<=arr.length-1;j++){
+        //         // var min = arr[i]
+        //         if(arr[j]<arr[i]){
+        //             var temp = arr[i]
+        //             arr[i] = arr[j]
+        //             arr[j] = temp                    
+        //         }
+        //     }
+        // }
+
+
+        for(var i=0;i<arr.length-1;i++){
+            var minIndex = i 
+            for(var j=i+1;j<=arr.length-1;j++){
+                if(arr[j]<arr[minIndex]){
+                    minIndex = j                 
+                }
+            }
+            var temp = arr[minIndex]
+            arr[minIndex] = arr[i]
+            arr[i] = temp   
+        }
+        document.write('</br>')
+        console.log(arr)
+        document.write(arr)
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 300px;
+            height: 3000px;
+        }
+    </style>
+</head>
+<body>
+<!-- 在 JavaScript 中，BOM（Browser Object Model，浏览器对象模型）是用于操作浏览器窗口和浏览器环境的一套 API -->
+
+    <!-- <script>
+        /*获取浏览器窗口尺寸
+     window.innerWidth
+     window.innerHeight
+//提示框
+var res = window.alert("请回答以下问题")  
+//询问框
+var res = window.confirm("你爱我吗？")
+//输入框
+var res = window.prompt("你爱我吗？")
+      */
+        var h=window.innerHeight
+        var w=window.innerWidth
+        console.log(w)
+        console.log(h)
+
+        //提示框
+        var res = window.alert("请回答以下问题")
+        console.log(res)
+
+        //询问框
+        var res = window.confirm("你爱我吗？")
+        console.log(res)
+
+        //输入框
+        var res = window.prompt("你爱我吗？")
+        console.log(res)
+
+    </script> -->
+
+
+
+    <button id="on">开启</button>
+    <button id="off">关闭</button>
+    <img src="../meterial/u=2996114176,2091795373&fm=253&app=138&f=JPEG.jpg" alt="">
+    <button id="go">揍你</button>
+    
+<!-- window.open('地址')开启标签页
+ window.close()关闭
+ window.onload = function(){}资源加载完毕
+ window.onresize = function(){}窗口尺寸发生变化
+ window.onscroll = function(){}滚动条位置发生变化
+ window.history.back()回退页面
+ window.history.forward()前进页面
+ window.scrollTo(left,top)浏览器滚动到
+    //left：浏览器卷去的宽度
+    //top浏览器卷去的高度
+ -->
+    <script>
+        on.onclick = function(){
+            //开启 标签页
+            window.open('https://chat.deepseek.com')
+        }
+        off.onclick = function(){
+            //关闭标签页
+            window.close()
+        }
+        //资源加载完毕
+        window.onload = function(){
+            console.log('资源已经加载完毕！')
+        }
+        //窗口尺寸改变
+        window.onresize = function(){
+            console.log('窗口尺寸改变！')
+        }
+        //滚动条位置变化
+        window.onscroll = function(){
+            console.log('滚动条位置变化！')
+            
+            //浏览器卷去的高度
+
+            //document.documentElement.scrollTop在有<!DOCTYPE html>文件名时使用，document.body.scrollT在没有<!DOCTYPE html>文件名时使用，以下为兼容性写法
+            var height1 = document.documentElement.scrollTop || document.body.scrollTop 
+            //浏览器卷去的宽度
+            var width1 = document.documentElement.scrollLeft || document.body.scrollLeft
+            console.log(height1)
+            console.log(width1)
+        }
+
+    //浏览器滚动到window.scrollTo(left,top)
+        //left：浏览器卷去的宽度
+        //top浏览器卷去的高度
+    //传递一个对象，可以设置如何滚动window.scrollTo({
+    //     left:xx,
+    //     top:yy,
+    //     behavior:'smooth'平滑滚动
+    // })
+        go.onclick = function(){
+            window.scrollTo(1000,1500)//瞬间定位到1000，1500的位置
+        }
+        go.onclick = function(){
+            window.scrollTo({
+                left: 200,
+                top:500,
+                behavior:"smooth"
+            })
+        }
+        
+    </script>
+</body>
+</html>

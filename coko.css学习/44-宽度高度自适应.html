@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding:0 ;
+        }
+        .box{
+            /* width: 100px; */
+            width: auto;
+            /* 宽度不写或宽度auto就是宽度自适应 */
+            height: 100px;
+            padding-left: 100px;
+            background-color: aquamarine;
+
+            /* 主要应有与  导航栏  通栏布局*/
+        }
+
+        .header,.footer{
+            height: 50px;
+            background-color: aquamarine;
+        }
+        .body{
+            /* height: 600px; *//* 高度自适应 */
+            background-color: red;
+            min-height: 500px;
+            /* 当内容很少时，保底高度 */
+            /* 最小高度（最常用）
+            最大高度
+            最小宽度
+            最大宽度 */
+        }
+        li{
+            height: 100px;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="header"></div>
+    <div class="body">
+        <ul>
+            <li>1111111111</li>
+            <li>1111111111</li>
+            <li>1111111111</li>
+            <li>1111111111</li>
+            <li>1111111111</li>
+            <li>1111111111</li>
+            <li>1111111111</li>
+            <li>1111111111</li> 
+
+
+        </ul>
+    </div>
+    <div class="footer"></div>
+
+</body>
+</html>

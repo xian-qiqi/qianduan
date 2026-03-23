@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+            解构赋值：快速从对象和数组中获取成员
+
+                数组的解构赋值
+                对象的解构赋值
+        */
+
+        //数组的解构赋值
+        //之前
+        // let arr = ['hello', 'world']
+        // let a = arr[0]
+        // let b= arr[1]
+        //解构赋值
+        // let [c, d] = ['hello', 'world']
+
+        //对象的解构赋值
+        //之前
+        let obj = {
+            name: 'Jack',
+            age: 20
+        }
+        // let name = obj.name
+        // let age = obj.age
+        //解构赋值
+        // let { name, age, a } = obj
+        // console.log(name, age, a)
+
+        //定义不一样的名字时，解构赋值似乎无法使用
+        //我想得到的是
+        let a = obj.name
+        console.log(a)
+        let { b } = obj  //无法得到name属性值--解决方法：使用别名
+        console.log(b)
+
+        //别名 ,相当于定义一个c变量，从obj中获取叫做age的值
+        let {age: c } = obj
+
+    </script>
+</body>
+</html>

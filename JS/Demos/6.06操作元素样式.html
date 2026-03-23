@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 100px;"></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+
+        /*
+        操作元素样式 css()
+        */
+       //css获取元素样式---可以获取元素行内样式也可以获取元素非行内样式
+       //语法：元素集合.css(你要获取的样式名称)
+       //返回值：改样式的样式值
+        console.log($('div').css('width'))
+        console.log($('div').css('height'))
+        console.log($('div').css('background-color'))
+
+
+        //设置样式
+        //语法：元素集合.css(样式名，样式值)
+        //注意：当你需要给一个元素设置样式值为px时，可以省略单位不写
+        $('div').css('width',300)  //300可以写'',也可以不写
+        $('div').css('background-color', 'pink')//要''
+
+
+        //css批量设置样式
+        //语法：元素集合.css({所有要设置的样式})
+        $('div').css({
+            hieght: 150,
+            width: 150,
+            opacity: 0.6,
+            'background-color': 'purple'  //要打引号！！！！
+        })
+
+    </script>
+
+</body>
+</html>

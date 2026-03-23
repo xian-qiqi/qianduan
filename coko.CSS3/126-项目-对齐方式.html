@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .box{
+            width: 500px;
+            height: 500px;
+            border: 1px solid #000000;
+            margin: 100px auto;
+            display: flex;
+            
+        }
+
+        .box div{
+            width: 100px;
+            /* height: 100px;————————————① */
+            border: 1px solid red;
+        }
+
+        .div1{
+            align-self: flex-start;
+            height: 100px;
+        }
+        .div2{
+            align-self: flex-end;
+            height: 100px;
+        }
+        .div3{
+            align-self: center;
+            height: 100px;
+            order: 1;
+        }
+        .div4{
+            align-self: baseline;
+            /* flex-start没有什么区别 */
+            height: 100px;
+        }
+        .div5{
+            align-self: stretch;/*拉伸：使盒子完全高度完全占满高度，注释掉高度①  */
+            /* 没设置时，默认为这个拉伸值 */
+            order: -1;
+        }
+    </style>
+</head>
+<body>
+    <!--项目对齐方式  align-self
+    大盒子box为“容器”   里面的小盒子为“项目”  -->
+
+    <!-- 项目顺序调整  order
+     order默认为0.越大越往后，可以设置为负值，使项目往前调，若order值相同，则按照原始顺序 -->
+    <div class="box">
+        <div class="div1">1111</div>
+        <div class="div2">2222</div>
+        <div class="div3">3333</div> 
+        <div class="div4">4444</div>   
+        <div class="div5">5555</div>    
+    </div>
+</body>
+</html>

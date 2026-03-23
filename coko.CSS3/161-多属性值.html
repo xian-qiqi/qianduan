@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            height: 600px;
+            width: 600px;
+            border: 5px solid gray;
+        }
+        .box div{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            border: 1px solid red;
+        }
+        .box div:nth-child(1){
+            transform: translateX(400px);
+        }
+        .box div:nth-child(2){
+            transform: translateX(400px) scale(0.5);
+        }
+        .box div:nth-child(3){
+            transform: scale(0.5) translateX(400px);
+            /* 先缩放再位移，导致位移开始位置改变 */
+        }
+        .box div:nth-child(4){
+            transform: translateX(400px) rotate(45deg);
+            /* 先缩放再位移，导致位移开始位置改变 */
+        }
+        .box div:nth-child(5){
+            transform: rotate(45deg) translateX(400px) ;
+            /* 先旋转再位移，旋转导致X轴发生转动，位移沿着X轴进行移动 */
+        }
+    </style>
+</head>
+<body>
+    <!-- transform 多个2D属性值共同使用 -->
+     <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+     </div>
+</body> 
+</html>

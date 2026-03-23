@@ -1,0 +1,47 @@
+# 1. 前端核心依赖包（最大、最没必要传）
+node_modules/
+
+# 2. 打包/编译产物（运行 npm run build 生成的）
+dist/
+build/
+out/
+dist-ssr/
+*.local.js
+
+# 3. 超大文件/安装包（解决GitHub 100MB限制）
+Node.js/软件/
+*.zip
+*.rar
+*.7z
+*.exe
+*.msi
+*.dmg
+*.iso
+
+
+# 5. 环境变量/敏感配置
+.env
+.env.*
+!.env.example
+
+# 6. 日志/缓存文件
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.cache/
+.eslintcache
+
+# 7. 编辑器/IDE配置文件（比如VSCode）
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# 8. 系统临时文件
+.DS_Store
+Thumbs.db

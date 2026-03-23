@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+
+        /*
+        jQuery的Ajax请求：
+            注意：因为发送ajax请求，不是操作Dom
+            不需要依赖选择器取获取元素
+            它的使用，直接以来jquery或$变量使用
+             语法：$.ajax({本次发发送ajax的配置项})
+            
+             配置项：
+                url:必填，表示请求地址
+                method：选填，默认GET，表示请求方式
+                data：选填，默认''，表示携带给后端的参数
+                async：选填，默认true，表示是否一部
+                success:选填，表示请求成功的回调函数
+                error：选填，表示请求失败的回调函数
+        */
+
+        // $.ajax({
+        //     url: 'http://localhost:8000/test/first.json',
+        //     success: function(res){
+        //         //res接受的是后端给回的响应结果
+        //         console.log(res)
+        //     }
+        // })
+        $.ajax({
+            url: 'http://localhost:8000/test/first.json',
+            method: 'POST', // 不行，需要使用flask
+            data:{name: 'jack', age: 20},//不行，Python 的静态文件服务器无法处理 POST 请求和动态数据
+            success: function(res){
+                //res接受的是后端给回的响应结果
+                console.log(res)
+            }
+        })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        ES6的类语法：
+            class 类名{
+                //原先ES5里面的构造函数
+                constructor(){}
+                //在类里面可以直接书写原型上的方法  
+                //与java里的类，类里的变量和方法一样
+
+                //书写静态属性和方法----需要加上static
+            }
+        */
+        // function Person(name, age){
+        //     this.name = name
+        //     this.age = age
+        // }
+        // Person.prototype.sayHi = function(){console.log('Hello World')}
+
+        // var p1 = new Person('Jack', 18)
+        // console.log(p1)
+        // p1.sayHi()
+
+        // //构造函数本质是一个函数，可以不与new关键字连用，但是不连用，构造函数自动创建对象和返回对象的能力又没有了
+        // var p2 = Person('rOSE', 15)
+
+
+    //类的书写
+        class Person {
+            constructor(name, age){
+                this.name = name
+                this.age = age
+            }
+            //可以直接写原型上的方法
+            sayHi(){ console.log('Hello World!') }
+
+            //静态属性
+            static a = 100
+            //静态方法
+            static go() { consolel.log('running') }
+        }
+        var p1 = new Person('Jaxk', 20)
+        console.log(p1)
+        //必须与new关键字连用
+        // var p2 = Person('e', 5)
+        //使用静态属性和方法
+        //静态属性 / 方法 (static xxx)：用 static 关键字修饰的属性和方法，属于类本身，而不属于任何一个实例。它们只能通过类名来访问。
+        // console.log(p1.a)
+        // console.log(p1.go)
+        console.log(Person.a)
+        console.log(Person.go)
+        console.log(p1)
+
+    </script>
+</body>
+</html>

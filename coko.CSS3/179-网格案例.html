@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            width: 600px;
+            height: 300px;
+            border: 5px solid pink;
+            margin: 10px auto;
+            display: grid;
+            grid-template-rows: repeat(3,100px);
+            grid-template-columns: repeat(6,100px);
+            grid-template-areas: 'a a a a b b'
+                                 'a a a a c c'
+                                 'd d e f c c'
+            ;
+            overflow: hidden;
+        }
+        .box img{
+            width: 100%;
+        }
+        .box img:nth-child(1){
+            grid-area: a;
+        }
+        .box img:nth-child(2){
+            grid-area: b;
+        }
+        .box img:nth-child(3){
+            grid-area: d;
+        }
+        .box img:nth-child(4){
+            grid-area: e;
+        }
+        .box img:nth-child(5){
+            grid-area: f;
+        }
+        .box img:nth-child(6){
+            grid-area: c;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="font\font-荧魈圈\u=2996114176,2091795373&fm=253&app=138&f=JPEG.jpg" alt="">
+
+        <img src="font\font-荧魈圈\u=3213775268,207028061&fm=253&app=138&f=JPEG.jpg" alt="">
+
+        <img src="font\font-荧魈圈\u=1678765238,696089853&fm=253&app=138&f=JPEG.jpg" alt="">
+        <img src="font\font-荧魈圈\z4.jpg" alt="">
+        <img src="font\font-荧魈圈\d000baa1cd11728b1135851686f325c2c3fd2c81.jpeg" alt="">
+
+        <img src="font\font-荧魈圈\_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=6674493468599372425&skey=@crypt_27f349a5_7c9169922ba25a8873dd512b72329e97&mmweb_appid=wx_webfilehelper.jpg" alt="">
+    </div>
+</body>
+</html>

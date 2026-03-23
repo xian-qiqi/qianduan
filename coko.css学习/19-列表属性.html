@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+
+        ul{
+        list-style-type: circle ;
+        /* disc实心圆
+        circle空心圆
+        square方块
+        none */
+        }
+
+        .li1{
+           list-style-image: url(img/5620d60fc73986bf.jpg);
+        }
+
+        .li2{
+           list-style-image: url(img/d2a8da55620e9107c1da76df64fd0357.jpg);
+        }
+
+        .li3{
+           list-style-image: url(img/49492456639b3411.jpg);
+        }
+
+        li{
+            border: 1px solid red;
+            list-style-position: inside;
+        }
+
+        .box{
+            list-style: none url(img/图片1.png) inside;
+            /* 复合属性 可以更改顺序 */
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="li1">1111111</li>
+        <li class="li2">222222</li>
+        <li class="li3">3333333333</li>
+    </ul>
+
+    <ul class="box">
+        <li>44444</li>
+        <li>55555</li>
+        <li>66666</li>
+    </ul>
+</body>
+</html>

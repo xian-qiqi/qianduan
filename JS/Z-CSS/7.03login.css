@@ -1,0 +1,47 @@
+form{
+    width: 600px;
+    padding: 20px;
+    border: 5px solid pink;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    position: relative;
+}
+form>span{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 5px;
+    font-size: 20px;
+    color: red;
+    display: none;
+}
+form>label{
+    height: 50px;
+    font-size: 30px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+
+}
+form>label>input{
+    width: 300px;
+    font-size: 25px;
+    margin-left: 10px;
+}
+form>p{
+    
+    font-size: 20px
+}
+form>button{
+    margin: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+form > label > select{
+    padding: 5px;
+    padding-left: 0px;
+    font-size: 20px;
+    margin-left: 10px;
+}

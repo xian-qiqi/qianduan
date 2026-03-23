@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <!-- 构造函数的使用   
+        =》构造函数与普通函数没有区别
+            构造函数只不过在调用的时候和new关键字连用
+        =》书写构造函数，函数名字首字母大写
+            当看到名字时就知道要和new连用
+        =》调用的时候，需要和new关键字连用
+            因为只用和new关键字连用的时候，这个函数才会有自动创建和返会对象的能力
+            因为我们之所以书写构造函数，就是为了使用它批量生产对象，如果不与new关键字连用，函数没有自动创建对象和返回对象的能力
+        =》调用构造函数的时候，如果不需要传递参数
+            可以不写最后的小括号
+            如果要传递参数，必须写
+        =》当函数名和new关键字连用的时候，this指向当前对象（new关键字前面的变量）
+            我们直接在函数体内数书写this.xxx = 值
+            就是在向自动创建出来的对象内添加内容
+        =》构造函数内部不要随便return
+            当你return了一个基本数据类型的时候，写了白写
+            当你return了一个复杂数据类型的时候，构造函数白写
+        
+    -->
+        
+    <script>
+        function Person(){
+            this.name = 'Jack'
+            this.age = 20
+            //return null  //无意义
+            return [1,2,3] //前面写的构造函数没意义，显示不出来
+        }
+        var obj = new Person()
+        console.log(obj)
+    </script>
+</body>
+</html>

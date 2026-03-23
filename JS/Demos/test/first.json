@@ -1,0 +1,9 @@
+{
+  "message": "AJAX请求成功！哇塞,你已经成功使用ajax发送给我一个请求,这是我给你的回应,我是一个字符串类型",
+  "status": "success", 
+  "data": {
+    "user": "学习者",
+    "timestamp": "2025-9-23",
+    "description": "这是你的第一个成功的AJAX请求"
+  }
+}

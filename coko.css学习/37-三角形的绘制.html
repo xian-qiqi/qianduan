@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .box1{
+            width: 0px;
+            height: 0px;
+            border-top:  20px solid red;
+            border-right:  20px solid rgba(0,0,0,0);
+            border-bottom:  20px solid rgba(0,0,0,0);;
+            border-left:  20px solid transparent;
+/* 将height width改为0是可以得到四个三角形 
+在将另外三个三角形颜色改为透明色，即可得到想要的三角形*/
+        }
+        .box2{
+            width: 0px;
+            height: 0px;
+            /* border-top:  20px solid transparent;
+            border-right:  20px solid rgba(0,0,0,0);
+            border-bottom:  20px solid red;;
+            border-left:  20px solid transparent; */
+            /* 下面的简单方法 */
+            border: 20px solid transparent;
+            border-bottom: 20px solid red;
+        }
+        body{
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <!-- 
+    addClass()
+    removeClass()
+    元素集合.toggleClass(你要切换的类名) 本身有即删除，本身无则添加
+    -->
+
+    <div class="a b c d"></div>
+    <button>切换</button>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+
+        $('div').addClass('e')
+        $('div').removeClass('b')
+
+        var btn = document.querySelector('button')
+        btn.onclick = function() {
+            $('div').toggleClass('s')
+            $('div').toggleClass('a')
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .box1{
+            width: 400px;
+            height: 400px;
+            background-color: green;
+            margin: 0 auto;
+            /* border: 40px solid red; */
+            /* 
+            px  或者  百分比 
+            v1 v2 左上右下一致， 左下右上一致
+            v1 v2 v3 左上 左下右上一致  右下
+            v1 v2 v3 v4 顺时针
+            */
+            /* border-radius: 20px;   */
+            border-radius: 20px 40px ;    
+            border-bottom-left-radius: 100px;
+            border-radius: 30px/90px;
+            /* 水平/垂直 不支持border-bottom-left-radius写法，只支持border-radius */
+            border-radius: 20px 30px 40px 50px/70px 80px 90px 100px;
+            /* 圆形 */
+            border-radius: 50%;
+            /* 扇形 */
+            border-radius: 400px 0 0 0;
+
+        }
+        .box2{
+            width: 800px;
+            height: 400px;
+            background-color: green;
+            margin: 0 auto;
+            margin-top: 100px;
+            /* 半圆形 */
+            border-radius: 400px 400px 0px 0px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+
+    </div>
+
+    <div class="box2">
+
+    </div>
+</body>
+</html>

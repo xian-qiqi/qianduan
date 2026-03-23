@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            width: 600px;
+            height: 600px;
+            border: 5px solid pink;            
+            display: grid;
+            grid-template-columns: repeat(3,100px);
+            grid-template-rows: repeat(3,100px);
+
+            /* grid-auto-flow: column;改变顺序方向 */
+            grid-auto-flow: column;
+
+            /* 单元格项目对齐 */ 
+            /* justify-content: center;
+            align-content: space-between; */
+                /* 简写 */
+            place-content: center center;
+            /* 单元格项目中内容对齐 */
+            /* justify-items: center;
+            align-items: center; */
+                /* 简写 */
+            place-items: center center;
+        }
+
+        .box div{
+            border: 1px solid green;
+            height: 50px;
+            width: 50px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+</body>
+</html>

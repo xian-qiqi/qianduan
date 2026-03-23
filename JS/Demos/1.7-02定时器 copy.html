@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 开启定时器 -->
+    <!-- 间隔定时器 语法：setInterval(函数，时间)
+     函数：每次要执行的内容
+     时间：单位是毫秒
+    -->
+    <!-- <script>
+        setInterval(function(){
+               console.log("执行一次")
+        },1000)
+    </script> -->
+  
+    
+    <!-- 延时定时器 语法：setTimeout(函数，时间)
+     在延迟设定时间后，执行函数一次
+    -->
+     <!-- 定时器的返回值：不区分定时器的种类，表示当前页面的第几个定时器 -->
+    <!-- <script>
+        var timer1 = setTimeout(function(){
+               console.log("执行一次")
+        },1000)//第一个定时器
+        var timer2 = setTimeout(function(){},1000)//第二个定时器
+        console.log("定时器的返回值："+timer1)
+        console.log("定时器的返回值："+timer2)
+    </script> -->
+
+
+
+<!-- 关闭定时器 -->
+    <!-- 
+        一、clearInterval(要关闭的定时器返回值)
+        二、clearTimeout(要关闭的定时器返回值)
+        注意：不区分定时器种类
+    -->
+
+    <button id="closeding">关闭定时器</button>
+    <script>
+        var timer1 = setInterval(function(){console.log('间隔定时器')},1000)
+        var timer2 = setTimeout(function(){console.log('延时定时器')},3000)
+
+        //给按钮绑定点击事件
+        closeding.onclick = function(){
+            //关闭定时器
+            clearInterval(timer1)
+            clearTimeout(timer2)
+            console.log('定时器已经关闭')
+        }
+    </script>
+</body>
+</html>

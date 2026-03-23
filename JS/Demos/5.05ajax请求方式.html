@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*GET 和  POST  由接口文档决定
+        GET：
+            偏向获取的语义化
+            参数是查询字符串
+            大小有限制2KB左右
+            参数位置在地址后面
+        POST：
+            偏向提交的语义化
+            参数格式多样，但是需要特殊说明
+            理论上没有限制
+            参数位置在请求体内
+        
+        */
+
+        var xhr = new XMLHttpRequest()
+        //需要携带参数，直接在地址后面进行参数的书写,需要些后端json文件和后端环境，在这里就不写了
+        //GET请求
+        // xhr.open('GET','http://localhost:8888/test/third.json?name=前端小七七&age=21',true)
+        // xhr.onload = function() {
+        //     console.log(JSON.parse(xhr.responseText))
+        // }
+        // xhr.send()
+
+        //POST请求
+        //不需要在地址后面拼接参数
+        xhr.open('POST','http://localhost:8888/test/third.json',true)
+        xhr.onload = function() {
+            console.log(JSON.parse(xhr.responseText))
+        }
+        //特殊说明：当你发送POST请求，并且需要携带参数的时候，需要进行特殊说明---看接口文档
+        //语法：xhr.setRequestHeader('content-type',你传递参数的格式（接口文档）)
+        xhr.setRequestHeader('content-type','application/x-www-form-urlencodes')
+
+        //send后面()是写请求体的位置
+        xhr.send('name=前端小七七&age=21')
+    </script>
+</body>
+</html>

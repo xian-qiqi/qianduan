@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <button>开始动画</button>
+    <button>停止</button>
+    <button>finish</button>
+    <div></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        /*
+    动画结束函数：
+        stop()结束
+        =>当任何一个元素，执行了stop方法后
+        =>会立即结束当前所有运动，运动到什么位置，就停留在什么位置
+        
+        finish() 完成
+        =>当任何一个元素，执行了finish方法后
+        =>会立即结束当前所有运动，直接去到动画结束位置
+        */
+
+        $('button:nth-child(1)').click(function(){
+            // $('div').toggle(2000)
+
+            //利用结束动画书写动画函数
+            //每一次触发的时候，都会把之前的动画停止下来，只执行本次最新的动画
+            // $('div').stop().toggle(2000)
+
+            //利用完成动画书写动画函数
+            //每一次触发的时候，都会把之前的动画停止下来，只执行本次最新的动画
+            $('div').finish().toggle(2000)
+        })
+        $('button:nth-child(2)').click(function(){
+            $('div').stop()
+        })
+        $('button:nth-child(3)').click(function(){
+            $('div').finish()
+        })
+    </script>
+
+</body>
+</html>

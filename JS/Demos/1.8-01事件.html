@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    事件绑定：1.事件源  2.事件类型  3.事件处理函数
+    
+    语法：
+    事件源.on事件类型 = 事件处理函数 
+    -->
+    <!-- 事件对象：当事件触发的时候，一个描述该事件信息的对象数据类型（记录时间发生时信息的对象数据类型） 
+     如何得到事件对象--直接在事件处理函数接受形参e，浏览器console会自动打印出
+     div.onclick = function(e){
+            console.log(e)
+    }
+    -->
+
+
+    <div></div>
+    <script>
+        var div = document.querySelector('div')
+        //绑定点击事件
+        div.onclick = function(e){
+            //书写点击时执行的代码
+            console.log('救命啊!')
+            console.log(e)
+        }
+    </script>
+</body>
+</html>

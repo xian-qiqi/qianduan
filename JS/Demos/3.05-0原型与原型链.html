@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 原型
+     概念：每一个构造函数天生自带一个prototype属性（原型），是一个对象数据类型
+     概念：每一个对象天生自带一个__pronto__，指向所属构造函数的prototype
+     概念：当你访问对象的成员时，首先在自己身上找，如果没有，自动去到__proto__上查找，
+    =》而__proto__指构造函数的prototype原型上
+    ==》我们把需要添加给实例的方法，放在构造函数的原型prototype上
+        就可以使实例进行访问使用了，而同一个构造函数的不同实例的__proto__都指向同一个构造函数的prototype，因此只需要一个函数空间，不会造成多个函数空间的浪费
+    -->
+
+    <script>
+        function Person(a,b){
+            this.a = a
+            this.b = b
+        } 
+        Person.prototype.sayHi = function(){
+            console.log('Hello World')
+        }
+
+        var p1 = new Person('Jack', 15)
+        console.log(p1.__proto__ === Person.prototype)//true
+        var p2 = new Person('Rose', 15)
+        console.log(p1.__proto__ === p2.__proto__)///true
+        //当访问实例的方法时，自己没有就去__proto__上找（也相当于去prototype上找）
+        console.log(p1.sayHi)
+        console.log(p2.sayHi)
+        console.log(p1.sayHi())
+        console.log(p1.sayHi === p2.sayHi)//true
+    </script>
+
+    <!-- 具有以下问题？？？？
+        1、实例对象上的__proto__指向谁？
+        2、Person.prototype（也是一个对象）的__proto__指向谁？
+        3、 Person（函数也是个对象）的__proto__指向谁？
+    -->
+</body>
+</html>

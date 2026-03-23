@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+         /* css写多行文本框 */
+         textarea{
+            width: 300px;
+            height: 150px;
+            resize:none ;
+            /* resize:重新设置大小, 
+            vertical horizontal both none(最常用)*/
+
+         }
+    </style>
+</head>
+<body>
+    <h1>多行文本输入框-文本域</h1>
+<br><br>
+    <div>
+        <!-- <textarea name="" id="" cols="20" rows="10"></textarea> -->
+        <!-- cols多少列
+             rows多少行(以字母为标准,汉字不行)  
+             因此不常用,一般用css来写   
+        -->
+
+        <textarea name="" id="" placeholder="请输入你的意见"></textarea>
+        <!-- placeholder:提示文字 -->
+<br><br>
+
+        <input type="text" value="122435">大擦纷纷呃
+        <!-- input的value在标签内 -->
+        <br>
+        <textarea name="" id="" placeholder="请输入你的意见">我是超级无敌大美人</textarea>
+
+        <textarea name="" id="" placeholder="请输入你的意见">
+            我是超级无敌大美人</textarea>
+        <!-- textarea的value默认在双标签内部,注意空格问题 -->
+
+    </div>
+
+</body>
+</html>

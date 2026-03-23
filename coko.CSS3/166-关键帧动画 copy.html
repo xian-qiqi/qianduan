@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            /* animation: name1 2s linear infinite  1s; */
+            animation-name: name1;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+
+            animation-direction: alternate;
+            /* 抽屉效果 */
+            animation-fill-mode: forwards;
+            /* none
+            forwards保留最后状态
+            backwards保留初始状态
+             */
+        }
+        div:hover{
+            animation-play-state: paused;
+        }
+        /* 声明动画 
+        百分比与from to*/
+        @keyframes name{
+            from{
+                width: 200px;
+                height: 200px;
+                background-color: green;
+            }
+            to{
+                width: 400px;
+                height: 600px;
+                background-color: rgb(48, 176, 193);
+            }
+        }
+        @keyframes name1{
+            0%{
+                width: 200px;
+                height: 200px;
+                background-color: rgb(128, 0, 0);
+            }
+            25%{
+                width: 200px;
+                height: 400px;
+                background-color: rgb(253, 165, 0);
+            }
+            50%{
+                width: 300px;
+                height: 400px;
+                background-color: rgb(229, 208, 18);
+            }
+            75%{
+                width: 400px;
+                height: 500px;
+                background-color: rgb(37, 243, 18);
+            }
+            100%{
+                width: 400px;
+                height: 600px;
+                background-color: rgb(6, 226, 237);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 关键帧动画animation 与 动画过渡transition
+     
+    相同点：都是随时间改变元素的属性值
+    不同点:transition需要触发一个事件（hover事件 click事件）才能随时间改变CSS属性值
+    animation不需要任何触发事件就可随时间改变CSS属性值
+
+    animation: 动画名称 持续时间 动画过渡类型 循环次数(无限次infinite) 动画在循环中是否反向运动 动画延迟时间;
+    -->
+
+    <!-- 关键帧单一属性
+    animation-name动画名称
+    animation-duration持续时间
+    animation-time-function动画的过渡类型
+    animation-delay动画延迟时间
+    animation-iteration-count动画循环次数（infinite无限）
+    animation-direction是否反向运动（normal正常reverse反向alternate先正向再反向并持续交替进行 alternate-reverse）
+    animation-play-state动画的状态（runing运行 pause暂停）
+    animation-fill-mode: forwards;（none    forwards保留最后状态       backwards保留初始状态）
+    -->
+    <div></div>
+</body>
+</html>

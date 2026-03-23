@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: yellow;
+            /*overflow: visible;显示溢出*/
+            /* overflow: hidden; 溢出隐藏，文本裁切 （常用）*/
+            overflow: scroll;/*不管有没有溢出，都会有滚动条*/
+            
+            overflow: auto;/*溢出出现滚动条，没溢出不出现滚动条 （常用）*/
+
+            /* overflow: inherit; 继承父元素的效果 */
+        }
+
+        .box{
+            /* overflow: auto; */
+            overflow-x:auto ;
+            overflow-y: hidden;
+            /* 只显示一边滚动条 */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, expedita. Quisquam, rerum culpa sint eaque quasi nemo quia, eum eos voluptate accusamus amet, beatae illo possimus repellendus autem assumenda iste.
+        <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Et inventore repellat vitae aspernatur! Deleniti saepe officia quod laboriosam iste molestias voluptates officiis ipsa exercitationem culpa praesentium, neque obcaecati quisquam sint! -->
+    </div>
+
+    <div class="box">
+        <img src="img/5e3fc6434b9c0.jpg" alt="">
+    </div>
+</body>
+</html>

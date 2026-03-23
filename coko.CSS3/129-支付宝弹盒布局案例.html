@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="stylesheet" href="font/font-支付宝/iconfont.css">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 955px;
+            height: 1420px;
+            background-color: rgb(82, 215, 184);
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+/* header设置 */
+        .header{
+            height: 124px;
+            background-color: #232939;
+            display: flex;
+        }
+        .header i{
+            width: 118px;
+            height: 124px;
+            line-height: 124px;
+            text-align: center;
+            font-size: 48px;
+            color: white;
+        }
+        .header span{
+            flex: 1;
+            height: 124px;
+            line-height: 124px;
+            font-size: 40px;
+            color: white;
+        }
+/* footer设置 */
+        .footer{
+            height: 128px;
+            background-color: gray;
+            display: flex;
+        }
+
+        .footer div{   
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #acadaf;
+            background-color: white;
+        }
+        .footer div:hover{
+            color: #06a9ee;
+        }
+        .footer div i{
+            height:66px;
+            line-height: 66px;
+            font-size: 58px;
+            
+        }
+        .footer div span{
+            height: 36px;
+            font-size: 28px;
+            line-height: 36px;
+        }
+/* section设置 */
+        section{
+            flex: 1;
+            background-color: white;
+        }
+        .main{
+            display: flex;
+            height: 278px;
+            background-color: #232939;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .main div{
+            height: 168px;
+            width: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .main div i{
+            font-size: 120px;
+            text-align: center;
+            color: white;
+        }
+        .main div span{
+            font-size: 32px;
+            text-align: center;
+            color: white;
+        }
+
+        .list{
+            display: flex;
+            background-color: white;
+            flex-wrap: wrap; 
+        }
+        .list div{
+            width: 25%;
+            height: 208px;
+            border: 1px solid white;
+            /* 有border，超出了行宽 使用怪异盒模型*/
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .list div i{
+            height: 77px;
+            font-size: 55px;
+            line-height: 77px;
+            text-align: center;
+            color: black;
+        }
+        .list div span{
+            height: 61px;
+            font-size: 30px;
+            line-height: 61px;
+            text-align: center;
+            color: black;
+        }
+        .list .l1 i{
+            color: rgb(221, 184, 62);
+        }
+        .list .l2 i{
+            color: rgb(45, 151, 203);
+        }
+        .list .l3 i{
+            color: rgb(194, 88, 88);
+        }
+
+        .pic img{
+            margin-top: 25px;
+            width: 955px;
+            height: auto;
+            /* display: block; */
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <header class="header">
+            <i class="iconfont icon-zhangdan"></i>
+            <span>账单</span>
+            <i class="iconfont icon-pengyouliebiao"></i>
+            <i class="iconfont icon-sousuo"></i>
+            <i class="iconfont icon-jiahao"></i>
+        </header>
+
+        <section>
+            <div class="main">
+                <div>
+                    <i class="iconfont icon-scan"></i>
+                    <span>扫一扫</span>
+                </div>
+                <div>                    
+                    <i class="iconfont icon-fukuan"></i>
+                    <span>付款</span></div>
+                <div>
+                    <i class="iconfont icon-kabao"></i>
+                    <span>卡券</span>
+                </div>
+                <div>
+                    <i class="iconfont icon-coin"></i>
+                    <span>汇款</span>
+                </div>
+            </div>
+
+            <div class="list">
+                <div class="l1">
+                    <i class="iconfont icon-xinyongqiahuankuan"></i>
+                    <span>信用卡还贷</span>
+                </div>
+                <div class="l2">
+                    <i class="iconfont icon-jizhangben"></i>
+                    <span>记账本</span>
+                </div>
+                <div class="l3">
+                    <i class="iconfont icon-gupiao"></i>
+                    <span>股票</span>
+                </div>
+                <div class="l2">
+                    <i class="iconfont icon-licaixiaogongju"></i>
+                    <span>理财小工具</span>
+                    
+                </div>
+                <div class="l3">
+                    <i class="iconfont icon-shejiaotubiao-08"></i>
+                    <span>淘宝</span>
+                </div>
+                <div   class="l3">
+                    <i class="iconfont icon-youxichongzhi"></i>
+                    <span>游戏充值</span>
+                </div>
+                <div  class="l2">
+                    <i class="iconfont icon-qinmifu"></i>
+                    <span>亲密付</span>
+                </div>
+                <div  class="l3">
+                    <i class="iconfont icon-jipiao"></i>
+                    <span>机票火车票</span>
+                </div>
+                <div class="l2">
+                    <i class="iconfont icon-shoujichongzhi"></i>
+                    <span>手机充值</span>
+                </div>
+                <div class="l2">
+                    <i class="iconfont icon-zhuanzhanghuikuan"></i>
+                    <span>手机转账</span>
+                </div>
+                
+                <div  class="l3">
+                    <i class="iconfont icon-koubeiwaimai"></i>
+                    <span>口碑外卖</span>
+                </div>
+                <div class="l2">
+                    <i class="iconfont icon-qua-copy"></i>
+                    <span>阿里旅行</span>
+                </div>
+            </div>
+
+            <div class="pic">
+                <img src="font\font-支付宝\S1.png" alt="">
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div>
+                <i class="iconfont icon-zhifubao"></i>
+                <span>支付宝</span>
+            </div>
+            <div>                    
+                <i class="iconfont icon-koubeiwaimai"></i>
+                <span>口碑</span>
+            </div>
+            <div>
+                <i class="iconfont icon-pengyou"></i>
+                <span>朋友</span>
+            </div>
+            <div>
+                <i class="iconfont icon-coin"></i>
+                <span>我的</span>
+            </div>
+        </footer>
+    </div>
+    
+</body>
+</html>

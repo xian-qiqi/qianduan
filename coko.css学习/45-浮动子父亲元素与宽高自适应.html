@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .left,.right{
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+        .left{
+            background-color: aqua;
+        }
+        .right{
+            background-color: aquamarine;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: bisque;
+        }
+
+        /* 解决高度塌陷的方法 */
+
+        /*方法 1. */
+        /* .box{
+            height: 100px;
+        } */
+        /* 缺点：夫元素限定了高度，当子元素过多时，出现换行，该方法失效 */
+
+        /* 方法3. */
+        .box{
+            overflow: hidden;
+        }
+        /* 缺点： 当子元素文字较多溢出时，会被裁掉*/
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="left"></div>
+        <div class="right">
+            <!-- 方法3:Lorem ipsum dolor, sit amet consectetur adipisicing elit. In quae, earum voluptatem deleniti at distinctio animi accusamus, assumenda dolorem, dolores quo iste unde. Error accusamus quisquam soluta et debitis aspernatur!  -->
+        </div>
+        <!-- <div class="left"></div>
+        <div class="right"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="left"></div>
+        <div class="right"></div> -->
+
+        <!-- <div  style="clear:both"></div> -->
+        <!-- 方法2. -->
+        <!-- 缺点：增加空标签，不利于代码可读性 -->
+        
+    </div>
+    <div class="box1"></div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+npm init初始化项目，创建 package.json 文件（项目基本信息，  依赖管理（最重要）记录项目用了哪些第三方包，  脚本命令）
+
+
+npm i md5 或 npm i md5 --save  或 npm i md5 --save-dev(开发时使用)  (i 表示install)  下载npm开源库的包

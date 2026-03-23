@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   
+        
+    <script>
+/*
+        具有以下问题？？？？
+        1、实例对象上的__proto__指向谁？
+            ==》指向所属构造函数的prototype
+            ==》p1所属的构造函数是Person
+            ==》即p1.__proto__指向Person.prototype
+        2、Person.prototype（也是一个对象）的__proto__指向谁？
+            ==》Person.prototype所属构造函数是谁？
+            ==》因为Person.prototype是一个对象数据类型
+            ==》在JS中所有Object数据类型都是属于Object这个内置构造函数的
+            ==》Person.prototype属于Object这个内置构造函数
+            ==》Person.prototype的__proto__指向Object。prototype？
+            ==》出现新的问题4，5
+
+        3、Person（函数也是个对象）的__proto__指向谁？
+            ==》Person是一个函数，函数本身也是一个对象，就有__proto__
+            ==》因为Person.prototype是一个对象数据类型
+            ==》在JS中所有函数都是属于内置构造函数Function的实例
+            ==》Person.__proto__指向function.prototype
+            ==》出现新的问题6，7
+
+        4、Object.prototype的__proto__指向谁？
+            ==》Object.prototype是一个对象数据类型，属于Object内置函数
+            ==》注意：Object.prototype在js中叫做顶级原型，不再有__proto__了
+            ==》Object.prototype的__proto__指向null
+        5、Objectde的__proto__指向谁?
+            ==》Object是一个内置构造函数，是一个函数，同时也是一个对象
+            ==》在JS中所有函数都是属于内置构造函数Function的实例
+            ==》Object也是Function的实例
+            ==》Object.prototype的__proto__指向Function.prototype
+        6、function.prototype的__proto__指向谁？
+            ==》Function.prototype是一个对象数据类型，属于Object内置函数的实例
+            ==》注意：Object.prototype在js中叫做顶级原型，不再有__proto__了
+            ==》Function.prototype的__proto__指向Object.prototype
+        7、function的__proto__指向谁?
+            ==》Function是一个内置构造函数，也是一个函数
+            ==》在JS中所有函数都是属于内置构造函数Function的实例
+            ==》Function是自己的构造函数和实例对象
+            ==》Function.__proto__指向Function
+*/
+
+    /*
+
+        原型链：
+            用__proto__串联起来的对象链状结构
+            注意：__proto__
+            每一个对象数据类型，都有属于自己的原型链
+            作用：为了访问对象成员
+        ==》对象访问机制：
+            当你需要访问对象成员时
+            首先在自己的身上查找，如果有直接使用
+            如果没有，自动到__proto__上查找
+            如果还没有，就去上一级__proto__上查找
+            直到Object.prototype都没有，则返回undefined
+
+    */
+        
+
+
+
+        function Person(a,b){
+            this.a = a
+            this.b = b
+        } 
+        Person.prototype.sayHi = function(){
+            console.log('Hello World')
+        }
+        var p1 = new Person()
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+/* 线性渐变 ！！！！！！！！！*/
+        .box1 {
+            height: 300px;
+            width: 300px;
+            border: 10px solid gray;
+            float: left;
+            margin: 30px;
+            /* 支持多颜色渐变 支持方向 支持角度的写法 */
+            background: linear-gradient(0deg, red, yellow, green, pink, rgb(213, 18, 174));
+            /*
+            to top 从下往上
+            to bottom 从上往下（默认）
+            to left 从右往左
+            to right  从左往右
+            to top right 从走下到右上
+            角度 0deg（0°） 90deg（90°）
+             */
+
+
+        }
+
+ /* 径向渐变 ！！！！！！！！！！！
+    background:radial-gradient(center,shape,size,start-color,...,last-color)
+    center渐变起点位置，可以为百分比，图形中心
+    shape渐变的形状--ellipse椭圆形（默认）  circle圆形
+    size渐变的大小，即渐变到哪里停止，有四个值，cloest-side最近边 farthest-side最远边 closest-corner最近角 farthest-corner最远角
+    */
+        .box2 {
+            height: 200px;
+            width: 200px;
+            float: left;
+            border: 5px solid gray;
+            margin: 30px;
+            background: radial-gradient(red 20%, green 50%, yellow 90%);
+            /*  不均匀渐变 
+            0%到20%为红色， 20%到50%为红色到绿色的渐变，50%到90%为绿色到黄色的渐变，90%到100%为黄色*/
+            /* border-radius: 50%;圆形 */
+        }
+
+        .box3 {
+            height: 100px;
+            width: 300px;
+            border: 5px solid gray;
+            float: left;
+            margin: 30px;
+            /* background: radial-gradient(red,green,yellow);椭圆形 */
+
+            background: -webkit-radial-gradient(60% 40%,circle,closest-side, red, green, yellow, black);
+            background: -moz-radial-gradient(60% 40%,circle closest-side, red, green, yellow, black);
+            /* shape和size必须放在一起circle closest-side ，不然会出错*/
+            
+            /* 需要加 前缀 -webkit- Google
+                          -moz-  火狐*
+
+            我的谷歌和火狐都不行，啊啊啊啊啊-----原因：因为我在60% 40%hi之间打了逗号,  不能有逗号 60% 40%（X轴 Y轴）*/
+        }
+
+
+/* 重复渐变！！！！！！！！！！！ */
+        
+        .box4{
+            height: 500px;
+            width: 500px;
+            border: 5px solid gray;
+            float: left;
+            margin: 30px;
+            background: repeating-linear-gradient(red,yellow 10%,green 20%);/* 重复线性渐变 */
+            background: repeating-radial-gradient(red,yellow 10%,green 20%);/* 重复径向渐变 */
+            
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- 线性渐变 -->
+    <div class="box1"></div>
+    <!-- 径向渐变 -->
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+
+
+</body>
+
+</html>

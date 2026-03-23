@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    
+    <!-- 面向对象是我们的一种开发方式
+    面向过程： 一种关注过程的开发方式
+        =>在开发过程中，我们要关注每一个细节，步骤和顺序
+    面向对象：一种面向对象的开发方式
+        =>在开发过程中，我们看看有没有一个对象能帮我们完成人物
+
+例子：一份烤鸭
+    面向过程：所有事情都是自己做的
+        ->考虑循序
+            ->先杀鸭子，先烤鸭子，先且、切鸭子
+        ->考虑步骤
+            ->杀鸭子的时候，先干什么，后干什么
+        ->考虑细节
+            ->配菜，胡罗卜，黄瓜丝
+            ->酱料
+    面向对象：
+        ->只需要点一份烤鸭
+        ->等待结果  
+
+开发过程中的例子：选项卡
+    面向过程：
+        考虑获取那些元素
+        考虑哪些元素绑定点击事件
+        考虑点击的时候，作什么
+    面向对象：
+        考虑有没有一个对象能帮我们完成选项卡
+        如果有，之际额让这个对象帮我完成
+        如果没有，我们需要制造这个对象
+    我们需要一个“机器”(构造函数)
+        这个机器能给我产生一个对象
+        生产出来的对象能完成选项卡功能
+        我们只需要准备好这个机器就可以了
+        本次开发过程中，我们制造机器，制造好之后，用机器生成一个对象完成选项卡
+        当你第二次想进行选项卡开发的时候，那么我们不需要再次制造机器了
+        只要用原来准备好的机器，重新制造新的选项卡对象即可
+    我们制造“机器”的过程，即为面向对象封装的过程==》面向对象的核心：高内聚低耦合（即面向对象的高度封装，一个模块能紧密相关，不同模块内依赖关系尽可能小）
+
+    机器：构造函数
+    属性：写在构造函数的体内
+    函数：写在构造函数的原型体内
+    -->
+
+
+    <!-- 创建对象的方式
+            一、字面量方式
+                var obj = {···}
+                可以后期动态添加
+            二、内置构造函数
+                var obj = new Object{}
+                可以后期动态添加
+            三、工厂函数创建对象
+                制造一个工厂函数
+                使用工厂函数创建对象
+            四、自定义构造函数
+                制造一个自定义构造函数
+                使用自定义自定义构造函数去创建创建
+    -->
+    <script>
+
+        // 一、字面量方式----不好批量创建
+        // var obj1 = {
+        //     name: Jack,
+        //     age: 20,
+        //     sayHi: function(){
+        //         console.log('Hello World!')
+        //     }
+        // }
+        // var obj2 = {
+        //     name: Jack,
+        //     age: 20,
+        //     sayHi: function(){
+        //         console.log('Hello World!')
+        //     }
+        // }
+
+        //二、内置构造函数--不好批量创建
+        // var obj1 = new Object()
+        // obj1.name = 'Jack'
+        // obj1.age = 20
+        // obj1.sayHi = function(){ console.log('Hello World!') }
+
+
+        //三、工厂函数创建----可批量创建
+        // function createObj(name, age){
+        //     //手动创建对象
+        //     var obj1 = new Object()
+        //     obj1.name = name
+        //     obj1.age = age
+        //     obj1.sayHi = function(){ console.log('Hello World!') }
+        //     //手动返回这个对象
+        //     return obj1
+        // } 
+        // //使用工厂函数创建对象
+        // var obj1 = createObj('Jack', 20)
+        // var obj2 = createObj('xiaomei', 18)
+        // console.log(obj1, obj2)
+
+        //四、自定义构造函数创建对象--可以批量创建
+        function createObj(name, age){
+            //自动创建对象
+            //手动向对象添加成员
+            //这里的this指向的是当前实例（new前面的对象）
+            this.name = name
+            this.age = age
+            //自动返回对象
+
+        }
+        //使用自定义构造函数创建对象
+        //构造函数在使用的时候，需要和new关键字连用
+        //如果不连用，那么没有意义
+        var obj1 = new createObj('Jack', 20)//与new连用，this指向obj1，
+        var obj2 = new createObj('Rose', 20)
+        console.log(obj1,obj2)
+    </script>
+</body>
+</html>

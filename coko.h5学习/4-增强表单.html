@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 增强表单——————input -->
+    <!-- 通过form表单将下列用户选取内容提交给后端，需要给他们命名name
+type"color"生成一个颜色选择的表单
+type"tel"唤起拨号盘表单
+type"search"产生一个搜索意义的表单
+type"range"产生一个滑动条表单
+type:"number"产生一个数值表单
+type"email"限制用户必须输入email类型
+type"url"限制用户必须输入url类型，必须输入网址
+type "date"限制用户必须输入日期
+type "month"限制用户必须输入月类型
+type"week"限制用户必须输入周类型
+type"time"限制用户必须输入时间类型
+type"datetime-local"选取本地时间
+    -->
+    
+    <form action="">
+        <div>
+            颜色选择：<input type="color" name="color">
+        </div>
+        <div>
+            邮箱填写：<input type="email" name="email" >  
+        </div>
+        <div>
+            url地址：<input type="url" name="url" >   
+        </div>
+        
+        <input type="submit" value="提交">
+    </form>
+    <!-- form和name是将数据提交给后端 -->
+
+
+    <!-- 增强表单————————选项列表 -->
+    <!-- 
+提示：option元素永远都要设置value属性。
+使用id即将input与datalist关联
+    -->
+
+    <input type="text" list="mylist">
+    <datalist id="mylist">
+        <option value="手机"></option>
+        <option value="手环"></option>
+        <option value="手饰"></option>
+        <option value="手表"></option>
+        <option value="手术"></option>
+        <option value="手链"></option>
+
+    </datalist>
+
+
+    <!-- 增强表单————————属性 -->
+     <!-- 
+autofocus属性：
+给文本框，选择框，或者按钮控件加上该属性，当打开页面时，该控件自动获得国标集点，一个页面只能有一个。
+required属性：
+必填项，不能为空
+multiple:
+可以输入一个或多个值，每个值之间用逗号分开,还可以应用于file
+pattern
+将属性值设为某个格式的正则表达式，在提交时会检查其内容是否符合给定格式。
+如：pattern="[0-9][A-Z]{3}"第一个字符为0-9中的数字，第二个字符为A-Z的字母，{3}表示重复前一个行为三次（及第二，第三，第四个字符都是A-Z的字母）
+
+     -->
+    <form action="">
+        <div>
+            姓名：<input type="text" name="name" autofocus required pattern="[0-9][A-Z]{3}" title="输入内容：一个数字与三个大写字母" placeholder="输入内容：一个数字与三个大写字母" width="500px">
+            <!-- 
+            title为鼠标选悬停时出现的提示
+            placehalder为文本框内出现的提示 
+            -->
+        </div>
+
+        <div>
+            邮箱：<input type="email" name="email" required multiple>
+        </div>
+        <input type="submit" value="提交">
+    </form>
+
+</body>
+</html>
+

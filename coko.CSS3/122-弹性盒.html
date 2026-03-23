@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- display: flex;弹性盒
+         影响：1、默认让子元素横向排列 
+              2、行内元素，变成块级元素
+              3、只有一个元素的时候，margin: auto; 自动居中    
+         -->
+    <style>
+        .box{
+            width: 500px;
+            height: 500px;
+            border: 1px solid #000000;
+            margin: 100px auto;
+            display: flex;
+        }
+
+        .box div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+
+        .box1{
+            width: 500px;
+            height: 500px;
+            border: 1px solid #000000;
+            margin: 100px auto;
+            display: flex;
+        }
+/*没有弹性盒时display: flex; span标签，行内元素，width和height无法使用
+  弹性盒时，行内元素，变成块级元素 ，可以设置宽和高 */
+        .box1 span{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+/* 3、只有一个元素的时候，margin: auto; 自动居中  */
+        .box span{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- 弹性盒是一种新的布局方式，特别适合移动端布局 -->
+     <!-- 快捷键ctrl+enter在当前行下方插入新行 -->
+    <div class="box">
+        <div>1111</div>
+        <div>2222</div>
+        <div>3333</div>
+        <div>4444</div>
+        <div>5555</div>
+    </div>
+    
+<!-- span行内元素 -->
+    <div class="box1">
+        <span>1111</span>
+        <span>2222</span>
+        <span>3333</span>
+        <span>4444</span>
+        <span>5555</span>
+    </div>
+
+    <div class="box">
+        <span>1111</span>
+    </div>
+
+</body>
+</html>

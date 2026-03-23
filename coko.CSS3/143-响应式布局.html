@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: yellow;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        @media screen and (min-width:1000px){
+            body{
+            background-color: red;
+            }
+        }
+        @media screen and (max-width:1000px) and (min-width:500px){
+            body{
+            background-color: green;
+            }
+        }
+
+        div{
+            height: 100px;
+            background-color: pink;
+            border: 2px solid blue;
+            box-sizing: border-box;
+            width: 25%;
+        }
+        @media screen and (orientation: portrait) {
+            div{
+                width: 33.33%;
+            }
+        }
+        @media screen and (orientation: landscape) {
+            div{
+                width: 20%;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <!-- 横竖屏检测  （orientation:portraint）竖屏(width<height)
+     （orientation:landspace）横屏（width>height）
+ -->
+
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+     
+</body>
+</html>

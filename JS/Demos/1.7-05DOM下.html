@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 创建节点 document.createElement('标签名称')-->
+    <!-- 插入节点 
+    父节点.appendChild(子节点) 将子节点放到父节点的内部，并且放到最后的位置
+    父节点.insertBefore(要插入的子节点 ，哪个子节点的前面)-->
+    <!-- 删除节点 
+    父节点.removeChild(子节点) 从父结点删除摸一个子节点
+    节点.remove()  将自己删除掉
+    -->
+    <!-- 替换节点  父节点.replaceChild(换上节点，换下节点)-->
+    <!-- 克隆节点  节点.cloneNode(是否克隆后代节点)-->
+
+
+    <!-- 获取元素尺寸
+    一、 元素.offsetHeight
+        元素.offsetWidth
+        获取  元素内容+padding+border区域的尺寸
+        
+    二、 元素.clientHeight
+        元素.clientWidth
+        获取  元素内容+padding
+    -->
+     <div>
+        <p>我是div内本身的p标签</p>
+     </div>
+     <script>
+        var div = document.createElement('div')
+
+        var span = document.createElement('span')
+        span.innerText = '我是创建出来的span标签'
+        var div1 = document.querySelector('div')
+        var p = document.querySelector('p')
+        div1.appendChild(span)
+        div1.insertBefore(span, p)
+
+        // div1.removeChild(p)
+        // span.remove()
+
+        var i = document.createElement('i')
+        i.innerText = '我是创建出来的i标签'
+        div1.replaceChild(i, span)
+
+        //克隆后代节点
+        var clone1 = div1.cloneNode(true)
+        //不克隆后代节点
+        var clone2 = div1.cloneNode(false)
+
+        console.log(clone1)
+        console.log(clone2)
+     </script>
+</body>
+</html>

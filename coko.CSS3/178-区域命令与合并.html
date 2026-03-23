@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- 区域划分---先命名grid-template-areas
+ 合并：区域命名为相同的名字 -->
+    <style>
+        .box{
+            width: 600px;
+            height: 600px;
+            border: 3px solid gray;
+            display: grid;
+            
+            /* 间距 */  
+            grid-template-rows: 200px 200px 200px;
+            grid-template-columns: 200px 200px 200px;
+            
+            grid-template-areas: 'a a c'
+                                 'd e f'
+                                 'g h i'
+            ;
+           
+        }
+        .box div:nth-child(1){
+            grid-area: a;
+            /* 第一个盒子区域名字为a 因为第一个盒子占了两个单元，第九个盒子被挤下去了*/
+            /* ！！！！！合并必须为正方形或矩形，不能是其他形状 */
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+</body>
+</html>

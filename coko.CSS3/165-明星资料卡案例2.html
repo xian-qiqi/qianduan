@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 350px;
+            border: 5px solid pink;
+            margin: 10px auto;
+            position: relative;
+        }
+        .box .pic{
+            width: 100%;
+            opacity: 0.7;
+        }
+        .box:hover .pic{
+            opacity: 1;
+        }
+        img,p,h2{
+            transition: all 2s;
+        } 
+        .box h2{
+            position: absolute;
+            left: 30px;
+            top: 50px;
+            color: rgb(216, 132, 146);
+            transform: translateY(-200px);
+        }
+        .box:hover h2{
+            transform: translateY(0px);
+        }
+        .box p{
+            position: absolute;
+            bottom: 0px;
+            left: 30px;
+            color: rgb(244, 174, 104);
+            transform: translateY(30px);
+            opacity: 0;
+        }
+        .box:hover p{
+            transform: translateY(-50px);
+            opacity: 1;
+        }
+        .box .musicBtn{
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            width: 50px;
+            color: black;
+            animation: musicBtnrun 2s infinite;
+            
+        }
+        /* .box:hover .musicBtn{
+            transform: rotate(360deg);
+        } */
+        @keyframes musicBtnrun {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="font\font-荧魈圈\z5.jpg" alt="" class="pic">
+        <div>
+            <h2>LOOKing BACK WAITING FOR YOU</h2>
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum minima expedita ad repellat assumenda nam dicta architecto officia sapiente, a ut aperiam quis dolorem sed labore quaerat sunt deserunt reiciendis.</P>
+        </div>
+        <img src="font\musicBtn.png" alt="" class="musicBtn">
+    </div>
+</body>
+</html>

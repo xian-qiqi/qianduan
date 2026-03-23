@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 
+1.Math.random()获取0-1的随机小数，不包含1
+2.Math.round(数字)对数字进行四舍五入
+3.Math.ceil(数字)对数字进行向上取整，返回向上取证的整数
+4.Math.floor(数字)对数字进行向下取整，返回向下取证的整数
+5.Math.pow(底数，指数)对数字进行去幂运算，返回值去幂后的结果
+6.sqrt(数字)对数字进行二次方根运算
+7.Math.abs(数字)对数字进行绝对值运算
+8.Math.max(数字1,数字2，数字3····)获取数字中的最大值
+9.Math.min(数字1,数字2，数字3····)获取数字中的最小值
+10.Math.PI属性，得到一个近似Π的值
+     -->
+
+     <script>
+//封装函数，获取一个范围内的随机整数 [0-10)
+        var num = Math.random()
+        // var num1 = num*10
+        // var res = Math.round(num1)
+        //round的0（0-0.444··）和10取整的比其他的1（0.5··-1.4··），2，3，···，9概率要小一些
+
+        //ceil取整-0.999~9.999每个数字概率相同
+        //floor取整0~10.999每个数字概率相同（选择）
+        var num1 = num*11
+        var res = Math.floor(num1)
+        console.log(res)
+        console.log('</br>')
+
+/*获取10~20之间的数————0~10之间的随机整数，+10
+获取x~y之间的随机整数，0~两数差之间的随机整数，然后+两数中小一点的数字
+*/
+        function randomNum(min, max){
+            //0~两数差之间的随机整数
+            var res1 = Math.floor(Math.random()*(max - min + 1))
+            //+两数中小一点的数字
+            var res = res1 + min
+            console.log(res)
+        }
+        var result = randomNum(15,36)
+        
+
+     </script>
+</body>
+</html>

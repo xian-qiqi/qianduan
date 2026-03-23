@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div>
+        hello
+        <p>你好 世界</p>
+        world
+    </div>
+
+    <input type="text" value="hello world">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        /*
+        html()  text()  val()
+        */
+
+        //html()  等价于JS中innerHMTL
+        //获取
+        // console.log($('div').html())
+        //设置
+        //语法：元素集合.html(你要设置的内容)
+        //注意：可以识别并解析html结构字符串
+        // $('div').html('<h2>我是后来设置的内容')
+
+
+        //text()等价于JS中原生的innerText
+        //获取
+        // console.log($('div').text())
+        //设置：元素集合.text(你要设置的内容)
+        //注意：不可以识别并解析html结构字符串
+        // $('div').text('<h2>我是后来设置的内容') //h2被直接当成了文本，而不是标签
+
+        //val()等价于JS中原生的value
+        //获取
+        console.log($('input').val())
+        //设置：元素集合.val(你要设置的内容)
+        //作用：用来设置该表单元素的value值
+        $('input').val('hahahahaah')
+    </script>
+</body>
+</html>

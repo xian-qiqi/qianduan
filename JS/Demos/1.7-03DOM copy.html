@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- DOM 一整套操作文档流相关内容的属性和方法 -->
+<!--
+ 一、获取元素的方法！！！！！！！！！！！！！！！！！
+
+    1、根据id名称document.getElementById('id')
+    2、根据元素类名document.getElementsByClassName('box') 
+        返回值必须为一个伪数组
+    3、根据元素标签名,document.getElementsByTagName('div')返回值必须为一个伪数组
+    4、根据选择器获取一个,document.querySelector(选择器)获取文档中满足选择器的第一个元素，返回值为伪数组
+    5、根据选择器获取一组 document.querySelectorAll(选择器)获取文档中满足选择器的所有元素，返回值为伪数组
+ -->
+    <!-- <div>一号</div>
+    <div class="box">二号</div>
+    <div class="box content">三号</div>
+    <div class="box" id="container">四号</div>
+    <script>
+        //1、根据id名称
+        // var ele1 = document.getElementById('container')
+        // console.log(ele1)
+
+        //2、根据元素类名,有类名对应元素，有多少获取多少，没有则为空伪数组
+        // var ele2 = document.getElementsByClassName('box') 
+        // var ele3 = document.getElementsByClassName('content') 
+        // console.log(ele2)
+        // console.log(ele3)
+
+        // 3、根据元素标签名
+        // var ele = document.getElementsByTagName('div')
+        // console.log(ele)
+
+        // 4、根据选择器获取一个
+        // var ele = document.querySelector('div')
+        // var ele1 = document.querySelector('.box')
+        // console.log(ele)
+        // console.log(ele1)
+        
+        //根据选择器获取一组
+        var ele = document.querySelectorAll('div')
+        var ele1 = document.querySelectorAll('.box')
+        console.log(ele)
+        console.log(ele1)
+
+    </script> -->
+
+
+<!-- 
+二、操作元素的内容！！！！！！！！！
+    1、操作元素文本内容
+        获取：元素.innerText
+        设置：元素.innerText = '新内容'
+    2、操作元素超文本内容
+        获取：元素.innerHTML
+        设置：元素.innerHTML = '新内容'
+-->
+    <!-- <button>操作内容</button>
+    <div>
+        <p>文本内容</p>
+    </div>
+
+    <script>
+        var ele = document.querySelector('div')
+        var btn = document.querySelector('button')
+        //获取元素的文本内容
+        console.log(ele.innerText)
+        //给按钮绑定点击事件
+        btn.onclick = function(){
+            ele.innerText = '新内容'
+        }
+
+
+        //获取元素的超文本内容
+        console.log(ele.innerHTML)
+        //给按钮绑定点击事件
+        btn.onclick = function(){
+            var ele1 = ele.innerHTML = '<span>新内容新内容</span>'
+            console.log(ele1.innerHTML) 
+        }
+    </script> -->
+
+
+<!-- 
+三、操作元素的属性！！！！！！！！！
+原生属性
+
+自定义属性:
+
+-->
+    <!-- 原生属性 -->
+    <!-- <button>操作属性</button>
+    <div id="box"><div>biv标签</div>
+    <input type="password">
+    <script>
+        //获取元素
+        var box = document.querySelector('div')
+        var inp = document.querySelector('input')
+        var btn = document.querySelector('button')
+        console.log(box)
+        console.log(btn)
+        console.log(inp)
+        btn.onclick = function(){
+            //修改元素属性
+            box.id = 'content'
+            inp.type = 'checkbox'
+        }
+    </script> -->
+    <!-- 自定义属性 -->
+    <!-- <button>操作属性</button>
+    <div id="box" hello="wrold"><div>biv标签</div></div>
+    <script>
+        //获取元素
+        var box = document.querySelector('div')
+        var btn = document.querySelector('button')
+        console.log(box)
+        console.log(btn)
+        //获取自定义属性
+        var res = box.getAttribute('hello')
+        console.log(res)
+
+        btn.onclick = function(){
+            //修改自定义元素属性
+            box.setAttribute('hello','fresh')
+            box.removeAttribute('hello')//删除hello这个自定义属性
+        }
+    </script> -->
+
+
+<!-- 
+四、操作元素类名
+    获取：元素.className
+    设置：元素.className = '新类名'
+-->
+    <!-- <button>操作属性</button>
+    <div class="content"><div>biv标签</div>
+    <script>
+        //获取元素
+        var box = document.querySelector('div')
+        var btn = document.querySelector('button')
+        
+        //获取元素类名
+        console.log(box.className)
+        btn.onclick = function(){
+            //修改自定义元素属性
+            box.className = 'box'
+        }
+    </script> -->
+
+
+
+<!-- 
+五、操作元素行内样式
+    获取：元素.style.样式名
+    设置：元素.style.样式名 = '样式值'
+    只能获取和设置元素的行内样式
+
+六、获取元素非行内样式
+    获取：window.getComputerStyle(元素).样式名
+    可以获取行内样式，也可获取非行内样式
+    前端js没有设置非行内样式的方法
+-->
+    <!--//行内样式 
+    <button>操作属性</button>
+    <div style="width: 100px; height: 100px; background-color: pink;"><div>biv标签</div>
+    <script>
+        //获取元素
+        var box = document.querySelector('div')
+        var btn = document.querySelector('button')
+        
+        //获取样式--输出样式值
+        console.log(box.style.width)
+        console.log(box.style.height)
+        console.log(box.style.backgroundColor)
+        btn.onclick = function(){
+            //修改自定义元素属性
+            box.style.width = '200px'
+            box.style.height = '200px'
+            box.style.backgroundColor = 'blue'
+        }
+    </script> -->
+    
+    <!-- 非行内样式 -->
+    <button>操作属性</button>
+    <div style="width: 100px; height: 100px; background-color: pink;"><div>biv标签</div>
+    <script>
+        //获取元素
+        var box = document.querySelector('div')
+        var btn = document.querySelector('button')
+        
+        //获取非行内样式
+        console.log(window.getComputedStyle(box).width)
+        console.log(window.getComputedStyle(box).height)
+        console.log(window.getComputedStyle(box).backgroundColor)
+        
+    </script>
+</body>
+</html>

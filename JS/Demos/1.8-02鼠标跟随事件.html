@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跟随鼠标的图片</title>
+    <style>
+        img{
+            width: 80px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            /* 初始状态显示图片 */
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <img src="../meterial/mudan.jpg" alt="牡丹花图片">
+
+    <script>
+        // 获取img标签
+        var imgbox = document.querySelector('img')
+
+        // 给document绑定鼠标移动事件
+        document.onmousemove = function(e){
+            // 拿到相对于窗口的坐标
+            var x = e.clientX
+            var y = e.clientY
+            console.log(x, y)
+
+            // 把x和y的值赋值给img标签的left和top样式
+            imgbox.style.left = x + 'px'
+            imgbox.style.top = y + 'px'
+        }
+
+        // 鼠标移出窗口时隐藏图片
+        document.onmouseout = function(){
+            imgbox.style.display = 'none';
+        }
+
+        // 鼠标重新进入窗口时显示图片
+        document.onmouseover = function(){
+            imgbox.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

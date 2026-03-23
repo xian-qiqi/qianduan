@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+/* transition: 属性 变化秒速 linear 匀速 延迟秒速; */
+        .div1{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            transition: height 2s;
+            transition: all 2s linear 5s;
+            
+        }
+        .div1:hover{
+            height: 600px;
+            width: 400px;
+            background-color: yellow;
+            /* 只支持 transition: all 2s; 不支持transition: height 2s;*/
+        }
+        /* 
+            属性 变化秒速 linear匀速（2s） 延迟秒速
+
+            除了display: none/block 属性
+        */
+
+        .div2{
+            height: 50px;
+            width: 200px;
+            background-color: blue;
+            border:1px solid pink;
+            /* transition: height 2s;
+            transition: all 2s linear 5s; */
+        }
+        .div2 ul{
+            /* display: none; */
+            margin-top: 50px;
+            transition: all 2s;
+            height: 0px;
+            overflow: hidden;
+        }
+        .div2:hover ul{
+            height: 300px;
+            width: 200px;
+            /* display: block; */
+        }
+    </style>
+</head>
+<body>
+    <div class="div1"></div>
+    <div class="div2">
+        我的菜单
+        <ul>
+            <li>11111</li>
+            <li>2222</li>
+            <li>333</li>
+            <li>44</li>
+            <li>5</li>
+        </ul> 
+    </div>
+</body>
+</html>

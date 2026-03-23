@@ -1,0 +1,9 @@
+{
+  "name": "yarn-s",
+  "version": "1.0.0",
+  "description": "learn",
+  "main": "index.js",
+  "author": "xian",
+  "license": "MIT",
+  "dependencies": {}
+}

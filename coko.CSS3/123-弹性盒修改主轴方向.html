@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+/* 弹性盒主轴方向改变：flex
+ */
+        .box{
+            width: 500px;
+            height: 500px;
+            border: 1px solid #000000;
+            margin: 100px auto;
+            display: flex;
+            flex-direction: column-reverse;
+            /* 改后的方向为主轴
+            row水平排列（水平主轴，垂直侧轴）
+            column垂直排列（垂直主轴，水平侧轴）
+            row-reverse水平反向排列
+            column-reverse
+
+            */
+        }
+
+        .box div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        水平方向（盒子排列的默认方向，可自己修改为垂直方向，此时垂直方向为主轴）————主轴
+        垂直方向————侧轴 -->
+
+    <div class="box">
+        <div>1111</div>
+        <div>2222</div>
+        <div>3333</div>
+        <div>4444</div>
+        <div>5555</div>
+    </div>
+</body>
+</html>

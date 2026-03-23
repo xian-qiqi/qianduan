@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+       *{
+        margin: 0;
+        padding: 0;
+       }
+
+      
+
+       /* 方案二 */
+       html,body{
+        height: 100%;
+       }
+       .left,.right{/* 中间逗号， */
+        height: 100%;
+        width: 200px;
+       }
+       .left{
+        background-color: aquamarine;
+        float: left;
+       }
+       .right{
+        background-color: lightcoral;
+        float: right;
+       }
+       .center{
+        width: calc(100% - 400px);
+        height: 100%;
+        background-color: bisque;
+        float: left;
+        
+       }
+
+    </style>
+</head>
+<body>
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="center"></div>
+    <!-- 当顺序时以下时，方案一不可行
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+     -->
+
+     
+    
+</body>
+</html>

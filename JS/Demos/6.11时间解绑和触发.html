@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+</head>
+<body>
+    <div>
+        我是div标签
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+
+        function handlerA(){console.log('我是A事件处理函数')}
+        function handlerB(){console.log('我是B事件处理函数')}
+        function handlerC(){console.log('我是C事件处理函数')}
+
+        $('div').click(handlerA)
+                .click(handlerB)
+                .click(handlerC)
+
+        //off()事件解绑
+        //全部事件一件解绑
+        // $('div').off('click')
+        //指定指定的事件解绑
+        // $('div').off('click', handlerB)
+
+        //trigger()事件触发
+        setInterval(function(){
+            $('div').trigger('click')
+        },1000) //设置每一秒触发一次带点击事件
+
+    </script>
+</body>
+</html>

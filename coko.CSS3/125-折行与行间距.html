@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+        .box{
+            width: 500px;
+            height: 500px;
+            border: 1px solid #000000;
+            margin: 100px auto;
+            display: flex;
+            /* 折行 */
+            flex-wrap: wrap;
+            /* 调整折行间的行间距 
+            flex-start
+            flex-end
+            center
+            space-between
+            space-around*/
+            align-content: flex-start;
+        }
+
+        .box div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 弹性盒是一种新的布局方式，特别适合移动端布局 -->
+    <div class="box">
+        <div>1111</div>
+        <div>2222</div>
+        <div>3333</div> 
+        <div>4444</div>   
+        <div>5555</div>
+        <div>6666</div>
+        <div>7777</div>
+        <div>8888</div>
+        <div>9999</div>
+
+    </div>
+</body>
+</html>

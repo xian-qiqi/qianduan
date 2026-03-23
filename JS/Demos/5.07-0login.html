@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        form{
+            width: 500px;
+            margin: 50px auto;
+            border: 5px solid skyblue;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center;
+            align-items: center; */
+            box-sizing: border-box;
+            font-size: 30px;
+            padding: 20px;
+            position: relative;
+            padding-top: 50px;
+        }
+        form>label{
+            height: 50px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        form>span{
+            position: absolute;
+            left: 50%;
+            top: 5px;
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
+            color: red;
+            display: none;
+
+        }
+        form>label>input{
+            font-size: 24px;
+            height: 40px;
+            border: 3px solid gray;
+            padding-left: 20px;
+            margin-left: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <span class="error">用户名或密码错误!!!</span>
+        <label >
+            用户名 : <input type="text" class="username">
+        </label>
+        <label > 
+            密  码 : <input type="password" class="password">
+        </label>
+        <button>登录</button>
+    </form>
+
+    <script>
+    //获取元素
+        var form = document.querySelector('form')
+        var nameInp = document.querySelector('.username')
+        var pwdInp = document.querySelector('.password')
+        var errorBox = document.querySelector('.error')
+        //给form标签绑定一个表单提交事件
+        form.onsubmit = function(e){
+            //注意：组织表单的默认提交方式---为了阻止不填写或乱填写
+            e.preventDefault()
+
+            //拿到填写的用户名和密码
+            var name = nameInp.value
+            var pwd = pwdInp.value
+            console.log(name, pwd)
+
+            //验证用户名和密码
+            if (!name || !pwd) return alert('请完整填写表单')
+
+            //发送ajax请求
+            var xhr = new XMLHttpRequest()
+            xhr.open('POST','http://localhost:8000/test/third.json',true)
+            xhr.onload = function() {
+                //因为后端返回的时json格式数据---需要解析
+                var res = JSON.parse(xhr.responseText)
+                console.log(res)
+
+                if (res.code === 0){
+                    //登陆失败
+                    errorBox.style.display = 'block'
+                }else{
+                    //登陆成功
+                    window.location.href = '5.07-1login-success.html'
+                }
+            }
+            //注意；POST请求带参数需要提前说明
+            xhr.setRequestHeader('content-type','application/x-www-form-urlencoded')
+            xhr.send('username='+name+'&password='+pwd)
+        }
+
+    
+
+
+    </script>
+</body>
+</html>

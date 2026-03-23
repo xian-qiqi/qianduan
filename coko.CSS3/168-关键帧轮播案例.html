@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .swiper-container{
+            height: 500px;
+            width: 500px;
+            border: 5px solid pink;
+            margin: 50px auto;
+            overflow: hidden;
+            
+        }
+        img{
+            width: 500px;
+        }
+        .swiper-slide{
+            float: left;
+            
+        }
+        .swiper-wrapper{
+            width: 10000px;
+            animation: swiperrun 10s infinite 1.5s;
+        }
+        .swiper-wrapper:hover{
+            animation-play-state: paused;
+        }
+        
+        @keyframes swiperrun {
+            0% {
+                transform: translateX(0);
+            }
+            10% {
+                transform: translateX(-500px); 
+            }
+            25% {
+                transform: translateX(-500px); 
+            }
+            35% {
+                transform: translateX(-1000px); 
+            }
+            50% {
+                transform: translateX(-1000px); 
+            }
+            60% {
+                transform: translateX(-1500px); 
+            }
+            75% {
+                transform: translateX(-1500px); 
+            }
+            85% {
+                transform: translateX(-2000px); 
+            }
+            100% {
+                transform: translateX(-2000px); 
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="font\font-荧魈圈\z1.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="font\font-荧魈圈\z2.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="font\font-荧魈圈\z3.jpg" alt="">   
+            </div>
+            <div class="swiper-slide">
+                <img src="font\font-荧魈圈\z4.jpg" alt="">
+            </div>
+
+            <!-- 为了实现无缝隙轮播，最后一张与第一张图片相同 -->
+            <div class="swiper-slide">
+                <img src="font\font-荧魈圈\z1.jpg" alt="">
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

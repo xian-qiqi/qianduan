@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* transform: translate();平移*/
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            transition: all 2s;
+        }
+        div:hover{
+            transform: translateX(100px) translateY(100px);
+            transform: translate(100px,100px); /* 等价于上一代码 */
+        }
+
+    /* 缩放 transform: sacle()*/
+        .box1{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            border: 5px solid red;
+            /* overflow: hidden; */
+            transition: all 2s;
+            transform: rotate(0deg);
+            
+        }
+        img{
+            width: 100%;
+            transition: all 2s;
+
+            transform-origin: left top;
+            /* 改变中心点的位置 */
+        }
+        .box1:hover img{
+            /* width: 150%; 从左上角开始*/
+            transform: scale(1.5);
+            /* 从中心开始缩放 
+            负值-倒向放大效果
+            scaleX()
+            scaleY()*/
+        }
+    
+    /* 旋转 transform: rotate */
+        .box1:hover{
+            transform: rotate(360deg);
+            /* 正值 顺时针
+            负值 逆时针 */
+            /* transition: all 2s; */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div></div>
+    <div class="box1">
+        <img src="font\font-荧魈圈\z4.jpg" alt="">
+    </div>
+</body>
+</html>

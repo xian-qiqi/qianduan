@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+/* rem !!!!!!!!!!! */
+        html{
+            font-size: 20px;
+        }      
+    /* 工具px to rem根据font-size: 16px;来换算的 */
+        /* .box{
+            width: 46.875rem;
+            height: 6.25rem;
+            background-color: yellow;
+        } */
+
+        /* 可在  文件-首选项-设置-搜索“px”- 将Cssrem:Root Font Size 修改为1rem（所需的像素值）*/
+        .box{
+            width: 37.5rem;
+            height: 5rem;
+            background-color: yellow;
+            /* font-size: 20px; */
+        }
+
+    </style>
+
+    <script>
+        //  font-size计算 
+        document.documentElement.style.fontSize=document.documentElement.clientWidth/750 * 20 + 'px'
+
+        // fontsize = 当前设备的css布局宽度/物理分辨率(设计稿的宽度)* 基准font-size
+    </script>
+</head>
+<body>
+    <div class="box">赵钱孙李</div>
+</body>
+</html>

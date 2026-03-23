@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul{
+            list-style: none;
+        }
+        li{
+            height: 50px;
+            width: 200px;
+            border: 1px solid gray;
+        }
+        ul:hover li:nth-child(1){
+            width: 600px;
+            transition: all 2s linear;
+            /* 匀速 */
+        }
+        ul:hover li:nth-child(2){
+            width: 600px;
+            transition: all 2s ease;
+            /* 逐渐慢下来 */
+        }
+        ul:hover li:nth-child(3){
+            width: 600px;
+            transition: all 2s ease-in;
+            /* 加速 */
+        }
+        ul:hover li:nth-child(4){
+            width: 600px;
+            transition: all 2s ease-out;
+            /* 减速*/
+        }
+        ul:hover li:nth-child(5){
+            width: 600px;
+            transition: all 2s ease-in-out;
+            /* 先加速后减速 */
+        }
+        ul:hover li:nth-child(5){
+            width: 600px;
+            transition: all 2s ease-in-out;
+            /* 先加速后减速 */
+        }
+        ul:hover li:nth-child(6){
+            width: 600px;
+            transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+            /* 贝塞尔曲线--有网址 */
+        }
+
+        div{
+            height: 200px;
+            width: 200px;
+            background-color: yellow;
+            transition-property: height background-color;
+            transition-duration: 2s;
+            transition-timing-function: linear;
+            transition-delay: 4s;
+        }
+        div:hover{
+            height: 400px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 动画过渡类型 -->
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <!-- 动画过渡单一属性
+        单一属性    transition-property: height background-color;
+        变化时间    transition-duration: 2s;
+        过渡类型    transition-timing-function: linear;
+        延迟时间    transition-delay: 4s; 
+    -->
+     <div></div>
+</body>
+</html>

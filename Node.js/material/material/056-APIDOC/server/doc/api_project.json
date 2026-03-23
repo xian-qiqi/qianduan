@@ -1,0 +1,15 @@
+{
+  "name": "后台系统接口文档",
+  "version": "1.0.0",
+  "description": "关于后台系统的接口文档描述",
+  "title": "企业网站定制系统",
+  "sampleUrl": false,
+  "defaultVersion": "0.0.0",
+  "apidoc": "0.3.0",
+  "generator": {
+    "name": "apidoc",
+    "time": "2022-04-15T05:47:45.811Z",
+    "url": "https://apidocjs.com",
+    "version": "0.26.0"
+  }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            height: 500px;
+            width: 500px;
+            margin: 30px;
+            background-color: skyblue;
+            overflow: hidden;
+            /*overflow: hidden;触发的BFC可以 解决margin塌陷， */
+        }
+        p{
+            height: 300px;
+            width: 300px;
+            margin: 30px;
+            background-color: orange;
+            overflow: hidden;
+            position: relative;
+        }
+        span{
+            display: block;
+            height: 100px;
+            width: 100px;
+            margin: 30px;
+            background-color: pink;
+            position: absolute;
+            left: 30px;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- 获取元素偏移量
+    offset()  position() 
+    -->
+    <div>
+        <p>
+            <span></span>
+        </p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        //offset()获取元素相对于页面左上角的坐标
+        //注意：返回值时一个对象数据类型，{top: xxx, left: xxx}
+        console.log('div:', $('div').offset()) //使用逗号，而不是+，+表示字符串拼接，对象数据类型表示为字符串即object
+        console.log('div:', $('p').offset()) 
+        console.log('div:', $('span').offset()) 
+
+        //position()获取的是元素的定位位置
+        //注意：如果设置为right和bottom，会自动换算为top 和left
+        console.log('div:', $('span').position()) 
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* 
+        特性问题
+        
+        1.兄弟关系，两个盒子垂直外边距与水平外边距问题
+        垂直方向上取最大值
+        水平（float）方向会进行合并处理
+        2.父子关系，给子加外边距，但作用与父身上，怎么解决？ */
+
+        .box1,.box2,.box3,.box4{
+            width: 200px;
+            height: 200px;
+        }
+
+        .box1{
+            background-color: red;
+            margin-bottom: 100px;
+        }
+
+        .box2{
+            background-color: yellow;
+            margin-top: 50px;
+        }
+
+        .box3{
+            float: left;
+            background: green;
+            margin-right: 100px;
+        }
+
+        .box4{
+            float: left;
+            background: pink;
+            margin-left: 50px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+    <div class="box3"></div>
+    <div class="box4"></div>
+    
+    
+</body>
+</html>

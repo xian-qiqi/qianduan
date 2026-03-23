@@ -1,0 +1,98 @@
+{
+  "message": "商品添加购物车成功",
+  "cart_items": [
+    {
+      "user_id": "1",
+      "goods_id": "1",
+      "name": "南极人【10双装】夏季男士丝袜超薄中筒袜男袜子薄款透气纯色商务袜P3038",
+      "price": "17.50",
+      "quantity": 2,
+      "image": "https://image5.suning.cn/uimg/b2c/newcatentries/0070081143-000000000144879464_2_200x200.jpg",
+      "category": "其他",
+      "is_hot": false,
+      "is_sale": true,
+      "sale_type": "70%",
+      "is_select": true
+    },
+    {
+      "user_id": "1",
+      "goods_id": "11",
+      "name": "依岚傲雪帽子男冬天加绒毛线帽加厚针织帽秋冬套头帽男包头帽棉帽冬季帽男4931",
+      "price": "19.00",
+      "quantity": 1,
+      "image": "https://image5.suning.cn/uimg/b2c/newcatentries/0070135590-000000000190306322_2_200x200.jpg",
+      "category": "其他",
+      "is_hot": true,
+      "is_sale": false,
+      "sale_type": "100%",
+      "is_select": true
+    },
+    {
+      "user_id": "1",
+      "goods_id": "12",
+      "name": "专柜同款 恒源祥100%纯羊毛围巾男女通用围脖 5503驼色",
+      "price": "64.50",
+      "quantity": 1,
+      "image": "https://image4.suning.cn/uimg/mcmp/tm/0010131143000000000690044837_1_200x200.jpg",
+      "category": "内衣配饰",
+      "is_hot": true,
+      "is_sale": true,
+      "sale_type": "50%",
+      "is_select": true
+    },
+    {
+      "user_id": "1",
+      "goods_id": "590",
+      "name": "MAXCOOK美厨精铁炒锅MDB-32 32CM无涂层燃气炉电磁炉通用丽晶系列",
+      "price": "39.20",
+      "quantity": 1,
+      "image": "https://image2.suning.cn/uimg/b2c/newcatentries/0000000000-000000000108775863_1_200x200.jpg",
+      "category": "烹饪厨具",
+      "is_hot": false,
+      "is_sale": true,
+      "sale_type": "80%",
+      "is_select": true
+    },
+    {
+      "user_id": "3",
+      "goods_id": "1",
+      "name": "南极人【10双装】夏季男士丝袜超薄中筒袜男袜子薄款透气纯色商务袜P3038",
+      "price": "17.50",
+      "quantity": 1,
+      "image": "https://image5.suning.cn/uimg/b2c/newcatentries/0070081143-000000000144879464_2_200x200.jpg",
+      "category": "其他",
+      "is_hot": false,
+      "is_sale": true,
+      "sale_type": "70%",
+      "is_select": true
+    },
+    {
+      "user_id": "4",
+      "goods_id": "4",
+      "name": "Palmer’s 帕玛氏 孕妇 4359-6 产前产后妊娠纹多效玫瑰精华油 150ml 美国直采",
+      "price": "74.00",
+      "quantity": 3,
+      "image": "https://image3.suning.cn/uimg/b2c/newcatentries/0070088060-000000000618581890_1_200x200.jpg",
+      "category": "其他",
+      "is_hot": true,
+      "is_sale": false,
+      "sale_type": "100%",
+      "is_select": true,
+      "cart_number": 3
+    },
+    {
+      "user_id": "4",
+      "goods_id": "5",
+      "name": "PPTV-32C3 32英寸 1GB+8GB 4核 64位处理器 高清智能网络WIFI平板电视机",
+      "price": "679.45",
+      "quantity": 2,
+      "image": "https://image1.suning.cn/uimg/b2c/newcatentries/0000000000-000000000657032630_1_200x200.jpg",
+      "category": "大家电",
+      "is_hot": true,
+      "is_sale": false,
+      "sale_type": "100%",
+      "is_select": true,
+      "cart_number": 2
+    }
+  ]
+}

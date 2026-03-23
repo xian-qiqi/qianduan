@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <div>请截图说明</div>
+        <div>
+            <!-- 选择文件 -->
+            <input type="file" name="请提交文件" id="">
+        </div>
+    </div>
+    
+    <div>
+        <div>图片按钮-代替提交按钮（input type="submit"）</div>
+        <form>
+            
+            <input type="image" src="/img/提交图片.png">
+        </form>
+    </div>
+
+    <div>
+        <div>隐藏按钮</div>
+        <input type="hidden" name="" id="" value="带给后端的个人信息">
+    </div>
+
+    <div>
+        <div>禁用，只读</div>
+        <button disabled="disabled">注册</button>
+        <!-- disabled="disabled"简写为disabled -->
+        <br>
+        <input type="radio" disabled>不满意
+        <br>
+        <input type="text" disabled value="你是个傻子"> 
+        <input type="text" readonly value="you are a fool">
+    </div>
+</body>
+</html>

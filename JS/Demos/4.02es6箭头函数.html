@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*在es6中，箭头函数表示对函数表达式的简写
+        对于声明式函数不能使用
+
+        */
+
+        // var fn1 = function(){console.log('fn1-Hello')}//函数表达式
+        // fn1()
+        // var fn2 = () => {console.log('fnn2-Hello')}//箭头表达式
+        // fn2()
+
+        /*箭头表达式的特殊之处
+            1、箭头函数某些时候可以省略()
+            当你的形参只有一个的时候,可以不写()
+
+            2、箭头函数某些时候可以省略{}
+            当你的函数代码只有一个的时候,可以不写{}，并且会自动把这一句好的结果当作函数的返回值
+            
+            3、箭头函数里面没有arguments
+
+            4、箭头函数内没有this
+            箭头函数内的this就是外部作用域的this
+        */
+       //省略{}和省略()
+        // var fn1 = a => {console.log('只有一个形参')}//箭头表达式
+        // fn1()
+        // var fn2 = (a, b) => console.log(a + b)//箭头表达式
+        // fn2(3, 2)
+
+        //没有arguments？？---传递任意变量
+        // var fn1 = () => {console.log(arguments)}//箭头表达式
+        // fn1(100, 200, 300)//报错
+        // var fn2 = function() {console.log(arguments)}//箭头表达式
+        // fn2(3, 2) //不报错
+
+        var obj = {
+            fn: function(){console.log(this)},
+            fn1: () => {console.log(this)}
+        }
+        obj.fn()//这里的this是obj
+        obj.fn1()//因为是箭头函数，内部没有this，就是外部作用域的this，在这里即全屏window
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <button>slideDown</button>
+    <button>slideUp</button>
+    <button>slideToggle</button>
+    <div></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <script>
+/*基本动画
+        1、slideDown()显示
+        2、slideUp隐藏
+        3、slideToggle切换
+            =》本身显示就隐藏
+            =》本身隐藏就切换
+        上述三个运动函数，由共同的参数
+        第一个表示运动时间
+        第一个表示运动曲线
+        第一个表示运动结束的回调函数
+*/
+        $('button:nth-child(1)').click(function(){
+            //执行show动画
+            $('div').slideDown(1000,'linear',function(){console.log('show结束了')})//1000毫秒
+        })
+        $('button:nth-child(2)').click(function(){
+            $('div').slideUp(1000,'linear',function(){console.log('hide结束了')})
+            
+        })
+        $('button:nth-child(3)').click(function(){
+            $('div').slideToggle(1000,'linear',function(){console.log('toggle结束了')})
+            
+        })
+
+    </script>
+    
+</body>
+</html>

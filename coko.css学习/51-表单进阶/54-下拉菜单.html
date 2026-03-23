@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <div>你的收货地址请选择</div>
+
+        <!-- select支持的属性
+        
+            1.size,显示几个
+            2.mutiple,选多个(无size,默认4个)
+            (要按住shift才可以多选)
+        -->
+
+        <!-- option支持属性
+        
+            1.value,提供给后端需要的value值
+            option中必须设置value值
+            2.selected默认选中
+            -->
+        <select size="1">
+            <option value="cq">重庆</option>
+            <option value="bj">北京</option>
+            <option value="hb" selected>湖北</option>
+            <option value="tj">天津</option>
+            <option value="sd">山东</option>
+        </select>
+<br><br>
+        <select size="3" multiple>
+            <option value="" selected>桌子</option>
+            <option value="">椅子</option>
+            <option value="" selected>凳子</option>
+            <option value="">筷子</option>
+            <option value="" selected>小子</option>
+        </select>
+
+    </div>
+</body>
+</html>

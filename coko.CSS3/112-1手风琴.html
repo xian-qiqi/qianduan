@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .continar{
+            display: none;
+        }
+        div.continar:target{
+            display: block;
+        }
+        
+        /* 
+        div:target{
+            display: block;
+        }也可以
+        */
+
+    </style>
+</head>
+<body>
+    
+    <!-- 折叠效果 -->
+    <div>
+        <a href="#a">aaa</a>
+        <div id="a" class="continar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta hic nostrum accusantium esse quisquam similique et eum asperiores omnis doloremque molestias, delectus quidem fugit exercitationem facilis, explicabo tempora! Omnis, eligendi.</div>
+    </div>
+
+    <div>
+        <a href="#b">bbb</a>
+        <div id="b" class="continar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta hic nostrum accusantium esse quisquam similique et eum asperiores omnis doloremque molestias, delectus quidem fugit exercitationem facilis, explicabo tempora! Omnis, eligendi.</div>
+    </div>
+
+    <div>
+        <a href="#c">ccc</a>
+        <div id="c" class="continar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta hic nostrum accusantium esse quisquam similique et eum asperiores omnis doloremque molestias, delectus quidem fugit exercitationem facilis, explicabo tempora! Omnis, eligendi.</div>
+    </div>
+
+</body>
+</html>

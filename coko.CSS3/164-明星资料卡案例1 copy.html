@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            display: block;
+            /* 有什么作用？？？？？？？？/ */
+        }
+        .box1{
+            width: 350px;
+            margin: 0 auto;
+            border: 5px solid pink;
+            position: relative;
+            overflow: hidden;
+        }
+        .box1 img{
+            width: 100%;
+            transition: all 1s;
+            
+        }
+        .box1:hover img{
+            transform: translateX(55px);
+            opacity: 0.6;
+        }
+        .box1 h2{
+            position: absolute;
+            left: 50px;
+            top: 10px;
+            color: rgb(235, 69, 54);
+            transition: all 1.5s 0.5s;
+        }
+        .box1:hover h2{
+            /* left: 100px; */
+            transform: translateX(100px);
+        }
+        .box1 p{
+            position: absolute;
+            left: 50px;
+            width: 70px;
+            background-color: rgb(206, 118, 228);
+            color: white;
+            transition: all 1s;
+        }
+        .p1{
+            top: 100px;
+            transform: translateY(400px);
+        }
+        .box1:hover .p1{
+            transform: translateY(0px);
+        }
+        .p2{
+            top: 200px;
+            transform: translateX(400px);
+        }
+        .box1:hover .p2{
+            transform: translateY(0px);
+        }
+        .p3{
+            top: 300px;
+            transform: translatex(-400px);
+        }
+        .box1:hover .p3{
+            transform: translateY(0px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <img src="font\font-荧魈圈\z1.jpg" alt="">
+        <h2>荧魈</h2>
+        <p class="p1">11111</p>
+        <p class="p2">22222</p>
+        <p class="p3">33333</p>
+    </div>
+</body>
+</html>

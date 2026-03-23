@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+        模板字符串: 就是ES6内新增的定义字符串的方式
+        以前：
+            var str = '内容'
+            var str = "内容"
+        现在：
+            var str = `内容`  （反引号）
+        区别：
+            1、可以换行书写,且保留换行
+            2、可以直接在字符串内解析变量
+                =》当你需要解析变量时，直接书写${变量}
+        */
+        
+        // var str1 = 'hello world'
+        // var str2 = "hello world"
+        // var str3 = `hello 
+        
+        //             world` 
+        // console.log(str1)
+        // console.log(str2)
+        // console.log(str3)
+        // console.log(str3 === str1)
+        // console.log(str3 === str2)
+        var age = 15000
+        var name = `我叫小可爱，今年${age}岁`
+        console.log(name)
+        var age = 15000
+        var name = '我叫小可爱，今年${age}岁'
+        console.log(name)
+
+
+    </script>
+</body>
+</html>

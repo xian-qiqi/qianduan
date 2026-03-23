@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*  2.父子关系，给子加外边距，但作用与父身上，怎么解决？ */
+
+        
+        .box5{
+             width: 500px;
+             height: 500px;
+             background: yellow;
+             /* padding-top: 100px; */
+             /* （1）缺点：改变盒子的高度500为600 ，可将盒子高度减为400*/
+
+             /* border: 1px solid transparent; */
+             /* transparent透明 */
+             /*(2) 边框的高度会改变父盒子的高度，要减去相应高度*/
+
+             overflow: hidden;
+        }
+
+        .box6{
+            width: 200px;
+            height: 200px;
+            background: red;
+            margin-top: 100px; 
+            /* float: left; */
+        }
+
+        /* 
+        方法：
+        （1）子margin-top===>父的padding-top，注意高度计算
+        （2）给父盒子设置边框，边框的高度会改变父盒子的高度，要减去相应高度
+         (3)给父或子加float
+        （4）overflow：hidden  BFC
+         */
+    </style>
+</head>
+<body>
+    <!-- 父子关系 -->
+    <div class="box5">
+        <div class="box6"></div>
+    </div>
+</body>
+</html>

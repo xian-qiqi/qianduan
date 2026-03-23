@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //创建一个ajax对象
+        var xhr = new XMLHttpRequest()
+
+        //配置本次的请求信息
+        //请求方式：按照接口文档来进行书写
+        //请求地址：按照接口文档来进行书写
+        //是否异步，默认true表示异步请求，false表示同步请求
+
+//F:\qian\前端学习\JS\Demos>python -m http.server 8888在根目录上打开服务器，对吗？
+        xhr.open('GET','http://localhost:8888/test/second.json',true)
+
+        //配置请求完成后触发的事件
+        //请求完成：本次请求发送出去，服务器接收到我们的请求，并且服务器返回的信息已经回到了浏览器
+        xhr.onload = function(){
+            //如何拿到后端返回的信息
+            //语法：xhr.responseText
+        // xhr.responseText 返回的是字符串格式的响应内容,浏览器控制台会自动格式化 JSON 字符串，使其看起来像对象，但实际上它还是字符串
+            // console.log('请求完成')
+            // console.log(xhr.responseText)
+
+            //当后端返回的是json格式字符串的时候，我们需要进行单独的解析--使其在浏览器中以对象数据类型
+            //语法：JSON.parse(json格式字符串)
+            //返回值；解析好的js格式数据
+            var res = JSON.parse(xhr.responseText)
+            console.log(res)
+
+        }
+
+        //把本次请求发送出去
+        xhr.send()
+    </script>
+</body>
+</html>

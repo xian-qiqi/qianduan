@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.con{
+    width: 966px;
+    margin: 0 auto;
+}
+
+.header{
+    
+    height: 110px;
+    /* background: yellow; */
+    
+}
+
+.loge {
+    width: 265px;
+    height: 110px;
+    float: left;
+}
+/* .loge img{
+    width: 265px;
+    height: 110px;
+}  */
+
+.headerright {
+    float: right;
+    
+
+}
+.headerright ul{
+    height: 44px;
+    line-height: 44px;
+    margin-top: 10px;
+
+}
+ .headerright li{
+    list-style: none;
+    float: right;
+} 
+.headerright li a{
+    padding: 0px 13px ;
+    border-right: 1px solid #b2c7ea;
+    font-size: 13px;
+    color: #ababab;
+}
+.headerright .a6{
+    padding-right: 0px;
+    border: 0px;
+}
+
+.headerright li .active{
+    color: #eb6ca1;
+}
+.search{
+    float: right;
+    width: 234px;
+    height: 28px;
+    border: 1px solid #d1d1d1;
+    line-height: 28px;
+}
+.search input{
+    border: 0;
+    outline: none;
+} 
+.search .left{
+    width: 196px;
+    float: left;
+    height: 28px;
+    padding-left: 14px ;
+}
+.search .right{
+    float: right;
+    width: 24px;
+    height: 28px;
+    /* background: url(../1.案例/anlisearch.png) left center图片太大
+     */
+     background-color: white;
+    background-image: url(../1.案例/anlisearch.png);
+    background-size:15px 15px;
+    background-repeat: no-repeat ;
+    background-position: left center;
+
+}
+
+.nav{
+    height: 53px;
+    line-height: 53px;
+    border: 1px solid #657588;
+    background: #0c345c;
+    color: white;
+}
+.nav li{
+    float: left;
+    list-style: none;
+    font-size: 16px;
+    margin-right: 76px;
+}
+.banner{
+    height: 380px;
+    /* background: url(../1.案例/anlishouyehaibao-1.png) no-repeat center;  等价于下面一坨*/
+    background-image:  url(../1.案例/anlishouyehaibao-1.png); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1182px 380px;
+}
+/* .banner img{
+    height: 380px;
+    width: 1182px;
+    margin: 0 auto;
+    
+} */
+.list{
+    height: 213px;
+    /* background: yellow; */
+    margin-top: 51px;
+    margin-bottom:35px ;
+}
+.item{
+    width: 305px;
+    height: 211px;
+    border: 1px solid #cccccc;
+    float: left;
+    margin-right: 19px;
+
+}
+.list img{
+    height: 164px;
+    width: 305px;
+    display: block;
+}
+.item p{
+    height: 47px;
+    line-height: 47px;
+    padding-left: 28px; ;
+    font-size: 16px;
+    color: #000;
+}
+.itemlast{
+    margin-right: 0;
+}
+.footer{
+    height: 206px;
+    border-top: 1px solid #cccccc;
+    background: url(../1.案例/anlishouyefooter.png);
+}
+.footer ul{
+    height: 84px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ecebeb;
+    line-height: 28px;
+
+}
+.footer ul li{
+    width: 210px;
+    padding-left: 30px;
+    font-size: 12px;
+    color: #336699;
+    float: left;
+    list-style: none;
+}
+.footer p{
+    height: 61px;
+    line-height: 61px;
+    padding-left: 30px;
+    font-size: 12px;
+}
+.footer p span{
+    color: #0096da;
+}

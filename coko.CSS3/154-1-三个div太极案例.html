@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            background-color: gray;
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            margin-top: 50px;
+            background-color: pink;
+            border-radius: 50%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: -moz-linear-gradient(white 50%,black 50%);
+            
+            /* background: -moz-radial-gradient(75% 50%,circle closest-side,white 25%,black 25%,black 100%,pink 100%); */
+        }
+        .left{
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            background: -moz-radial-gradient(black 25%,white 28%);
+        }
+        .right{
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            background: -moz-radial-gradient(white 25%,black 28%);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>

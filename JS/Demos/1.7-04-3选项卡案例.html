@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul, li, ol{
+            /* 清楚默认样式 */
+            list-style: none;
+        }
+        .box{
+            height: 300px;
+            width: 300px;
+            border: 5px solid pink;
+            display: flex;
+            flex-direction: column;
+            margin: 50px auto;
+        }
+        .box>ul{
+            height: 60px;
+            display: flex;
+        }
+        .box>ul>li{
+            flex: 1;
+            color: #fff;
+            background-color: skyblue;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            /* cursor: pointer;是 CSS 中用于设置鼠标指针样式的属性，它的作用是当鼠标悬停在元素上时，将指针显示为「手形图标」（类似点击链接时的鼠标样式），向用户直观地提示：这个元素是可以点击的。 */
+        }
+        .box>ul>li.active{
+            background-color: orange;
+        }
+        .box>ol{
+            flex: 1;
+            position: relative;
+        }
+        .box>ol>li{
+            height: 100%;
+            width: 100%;
+            background-color: aquamarine;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            display: none;
+            /* 隐藏盒子 */
+        }
+        .box > ol > li.active{
+            display: flex;
+            /* 显示盒子 不适用display: block;*/
+    /*  .box>ol>li 已经设置了 display: flex，效果只有在 flex 布局下才能生效。如果改用 display: block 来显示元素，会导致：*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+
+        <ol>
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+        </ol>
+    </div>
+        
+
+    <script>
+        //获取元素
+        var btns = document.querySelectorAll('ul > li')
+        var tabs = document.querySelectorAll('ol > li')
+
+        //给btns里面的所有按钮添加点击事件
+        btns.forEach(function (item, index) { 
+
+            item.onclick = function(){
+
+                //给btns和tabs里面的所有内容都取消active类名
+                btns.forEach(function(t,i) {
+                    t.className = ''
+                    tabs[i].className = ''
+                })
+
+                //给当前点击的按钮和索引对应的盒子添加active按钮
+                item.className = 'active'
+                tabs[index].className = 'active'
+            }
+        });
+    </script>
+</body>
+</html>

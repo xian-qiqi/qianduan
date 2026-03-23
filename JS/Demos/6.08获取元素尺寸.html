@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            height: 300px;
+            width: 300px;
+            border: 20px solid pink;
+            margin: 20px;
+            padding: 20px;
+            background-color: skyblue;
+            background-clip: content-box;
+            /* CSS 中用于控制背景绘制区域的属性。指定背景（背景图片或背景颜色）仅绘制在元素的内容区域（content box）内，不包括内边距（padding）、边框（border）和外边距（margin）区域。*/
+            /* display: none;
+            visibility: hidden; */
+            background-clip: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 获取元素尺寸
+    注意:不管该元素是否隐藏，都能获取到该元素的值 
+    不管盒子模型什么状态，拿到的尺寸区域不变(区域的值可能发生变化)
+    -->
+    <div ></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        //width()  height()获取元素内容区域的尺寸
+        console.log($('div').width())
+        console.log($('div').height())
+
+        console.log('------------------')
+        console.log($('div').innerWidth())
+        console.log($('div').innerHeight())
+
+        console.log('------------------')
+        console.log($('div').outerWidth())
+        console.log($('div').outerHeight())
+
+        //outerWidth(true) outerHeight(true)包含设置的margin属性值
+        console.log('------------------')
+        console.log($('div').outerWidth(true))
+        console.log($('div').outerHeight(true))
+        
+    </script>
+</body>
+</html>

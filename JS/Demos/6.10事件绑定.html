@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 500px;
+            height: 500px;
+            background-color: skyblue;
+        }
+        p{
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 事件绑定方法
+    on()  one()  hover()  常用事件函数 
+    -->
+    <div>我是div标签
+        <p>我是div内的p标签</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+
+        //on()方法
+        //----基础绑定事件
+        //语法：元素集合.on('事件类型',事件处理函数)
+        // $('div').on('click', function(){console.log('我是div的点击事件')})
+        //----事件委托绑定事件
+        //语法：元素集合.on('事件类型', 选择器， 事件处理函数)
+        //把事件绑定给div元素，当你在div内的p元素触发事件的时候，执行事件处理函数
+        //事件委托，把p元素的事件委托给div元素来绑定，只有点击p标签才触发，点击div标签不触发
+        // $('div').on('click', 'p', function(){console.log('我是事件委托形式的事件')})
+        //----批量绑定事件
+        ///语法：元素集合.on(事件类型1: 处理函数, 事件类型2: 处理函数, ····)
+        //注意：不能进行事件委托
+        // $('div').on({
+        //     click: function(){console.log('点击事件')},
+        //     mouseover: function(){console.log('鼠标移入事件')},
+        //     mouseout: function(){console.log('鼠标移出事件')},
+        // })
+
+
+        //one()与on()方法一样，区别：one方法只能执行一次
+        // $('div').one('click', function(){console.log('基础绑定事件')})
+        // $('div').one('click', 'p', function(){console.log('事件委托事件')})
+        // $('div').one({
+        //     click: function(){console.log('点击事件')},
+        //     mouseover: function(){console.log('鼠标移入事件')},
+        //     mouseout: function(){console.log('鼠标移出事件')},
+        // })
+
+
+        //hover()
+        //注意：JQuery里面一个特殊的事件
+        //语法：元素集合.hover(移入时触发的函数，移出时触发的函数)
+        //当你只传递一个函数时，会在移入移出都触发
+        // $('div').hover(
+        //     function(){console.log('函数1')}, 
+        //     // function(){console.log('函数2')}
+        // )
+
+
+        //常用事件函数
+        //JQuery()把常用的事件，单独做成了时间函数
+        //通过调用事件函数，来达到绑定效果
+        //click()  mouseout()  mouseover()  change() ····
+        $('div').click(function(){console.log('hello world')})
+
+    </script>
+
+</body>
+</html>
